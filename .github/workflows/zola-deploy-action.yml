@@ -4,7 +4,7 @@ name: Build and deploy GH Pages
 jobs:
   build:
     runs-on: ubuntu-latest
-    if: github.ref == 'refs/origin/main/createx-site' #changed from 'refs/heads/main'
+    if: github.ref == 'refs/origin/main'  # changed from 'refs/heads/main'
     steps:
       - name: checkout
         uses: actions/checkout@v3.0.0
@@ -12,6 +12,6 @@ jobs:
         uses: shalzz/zola-deploy-action@v0.17.2
         env:
           # Target branch
-          PAGES_BRANCH: gh-pages
+          PAGES_BRANCH: createx-site  # gh-pages
           # Or if publishing to the same repo, use the automatic token
           TOKEN: ${{ secrets.GITHUB_TOKEN }}

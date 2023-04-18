@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Juice - An intuitive, elegant, and lightweight Zola theme for product sites.</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <link rel="icon" type="image/png" href="/favicon.ico">
+    
+    
+    <link href="https://fonts.googleapis.com/css?family=Alfa+Slab+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Fira+Sans:400,500,600&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="/normalize.css">
+    <link rel="stylesheet" href="/juice.css">
+    <script src="scripts.js"></script>
+    
+    
+</head>
+
+<body>
+    
+
+    <header class="pos-absolute bg-transparent">
+        
+
+<a href="/">
+    <div class="logo">
+        <img src="/juice.svg" alt="logo">
+        Juice
+    </div>
+</a>
+
+<nav>
+    
+    
+    
+    <a class="nav-item subtitle-text" href="/showcases/">Showcases</a>
+    
+    
+    
+    
+    <a class="nav-item subtitle-text" href="/about/">About</a>
+    
+    
+    
+    
+    
+    
+    
+    <a class="nav-item subtitle-text" href="/test/">test</a>
+    
+    
+    
+</nav>
+
+    </header>
+
+    <div class="hero">
+        
+        <section class="text-center">
+            <h1 class="heading-text">
+                Build your static website
+            </h1>
+            <h3 class="title-text">
+                <b>Juice</b> is an intuitive, elegant, and lightweight Zola theme for product websites.
+            </h3>
+        </section>
+        <img class="hero-image" src="/juice.svg">
+
+        <div class="explore-more text"
+            onclick="scroll_into_view()">
+            Explore More ⇩
+        </div>
+        
+    </div>
+
+    
+
+    <main>
+        
+        
+        
+        
+        
+        <div class="toc">
+            <div class="toc-sticky">
+                
+                <div class="toc-item">
+                    <a class="subtext" href="/#juice">Juice</a>
+                </div>
+                
+                
+                <div class="toc-item">
+                    <a class="subtext" href="/#installation">Installation</a>
+                </div>
+                
+                
+                <div class="toc-item">
+                    <a class="subtext" href="/#structure">Structure</a>
+                </div>
+                
+                
+                <div class="toc-item-child">
+                    <a class="subtext" href="/#hero"><small>- Hero</small></a>
+                </div>
+                
+                <div class="toc-item-child">
+                    <a class="subtext" href="/#page"><small>- Page</small></a>
+                </div>
+                
+                <div class="toc-item-child">
+                    <a class="subtext" href="/#css-variables"><small>- CSS variables</small></a>
+                </div>
+                
+                <div class="toc-item-child">
+                    <a class="subtext" href="/#favicon"><small>- Favicon</small></a>
+                </div>
+                
+                <div class="toc-item-child">
+                    <a class="subtext" href="/#fonts"><small>- Fonts</small></a>
+                </div>
+                
+                
+                
+                <div class="toc-item">
+                    <a class="subtext" href="/#configuration">Configuration</a>
+                </div>
+                
+                
+                <div class="toc-item">
+                    <a class="subtext" href="/#shortcodes">Shortcodes</a>
+                </div>
+                
+                
+                <div class="toc-item">
+                    <a class="subtext" href="/#showcases">Showcases</a>
+                </div>
+                
+                
+                <div class="toc-item">
+                    <a class="subtext" href="/#contributing">Contributing</a>
+                </div>
+                
+                
+            </div>
+        </div>
+        
+        
+
+        <div class="content text">
+            
+            <div id="features" class="heading-text">Overview</div>
+            <h1 id="juice">Juice</h1>
+<p><strong>Juice</strong> is an intuitive, elegant, and responsive Zola theme for product sites.</p>
+<ul>
+<li>Build for product sites</li>
+<li>Simple and intuitive structure</li>
+<li>Clean and elegant design</li>
+<li>Responsive and mobile device compatible</li>
+<li>Customize and extend friendly</li>
+</ul>
+<h1 id="installation">Installation</h1>
+<blockquote>
+<p><strong>Zola</strong> is a prerequisite. Please refer to the <a href="https://www.getzola.org/documentation/getting-started/installation/">Zola installation</a> docs.</p>
+</blockquote>
+<p>First download this theme to your <code>themes</code> directory:</p>
+<pre data-lang="bash" class="language-bash "><code class="language-bash" data-lang="bash">$ cd themes
+$ git clone https:&#x2F;&#x2F;github.com&#x2F;huhu&#x2F;juice.git
+</code></pre>
+<p>or add as a submodule</p>
+<pre data-lang="bash" class="language-bash "><code class="language-bash" data-lang="bash">$ git submodule add https:&#x2F;&#x2F;github.com&#x2F;huhu&#x2F;juice  themes&#x2F;juice
+</code></pre>
+<p>and then enable it in your <code>config.toml</code>:</p>
+<pre data-lang="toml" class="language-toml "><code class="language-toml" data-lang="toml">theme = &quot;juice&quot;
+</code></pre>
+<h1 id="structure">Structure</h1>
+<h3 id="hero">Hero</h3>
+<p><strong>Juice</strong> is designed for product websites, hence we let <strong>hero</strong> part fills whole of screen.
+You can customize your <strong>hero</strong> by using <code>hero</code> block in the <code>templates/index.html</code>.</p>
+<pre data-lang="html" class="language-html "><code class="language-html" data-lang="html">{% extends &quot;juice&#x2F;templates&#x2F;index.html&quot; %}
+{% block hero %}
+    &lt;div&gt;
+        Your cool hero html...
+    &lt;&#x2F;div&gt;
+{% endblock hero %}
+</code></pre>
+<h3 id="page">Page</h3>
+<p>Every markdown file located in <code>content</code> directory will become a <strong>Page</strong>. There also will display as
+a navigate link on the top-right corner.
+You can change the frontmatter's <code>weight</code> value to sort the order (ascending order).</p>
+<pre><code>+++
+title = &quot;Changelog&quot;
+description = &quot;Changelog&quot;
+weight = 2
++++
+
+</code></pre>
+<h3 id="css-variables">CSS variables</h3>
+<p>You can override theme variable by creating a file named <code>_variables.html</code> in your <code>templates</code> directory.</p>
+<pre data-lang="html" class="language-html "><code class="language-html" data-lang="html">&lt;style&gt;
+    :root {
+        &#x2F;* Primary theme color *&#x2F;
+        --primary-color: #FED43F;
+        &#x2F;* Primary theme text color *&#x2F;
+        --primary-text-color: #543631;
+        --primary-text-color-over: #000;
+        &#x2F;* Primary theme link color *&#x2F;
+        --primary-link-color: #F9BB2D;
+        &#x2F;* Secondary color: the background body color *&#x2F;
+        --secondary-color: #fcfaf6;
+        --secondary-text-color: #303030;
+        &#x2F;* Highlight text color of table of content *&#x2F;
+        --toc-highlight-text-color: #d46e13;
+        --toc-background-color: white;
+        --code-color: #4a4a4a;
+        --code-background-color: white;
+        --shadow-color: #ddd;
+        &#x2F;* Font used for headers (h1 &amp; h2) *&#x2F;
+        --header-font-family: &quot;Fira Sans&quot;, sans-serif;
+        &#x2F;* Font used for text *&#x2F;
+        --text-font-family: &quot;Fira Sans&quot;, sans-serif;
+    }
+&lt;&#x2F;style&gt;
+</code></pre>
+<h3 id="favicon">Favicon</h3>
+<p>The same way as changing the <code>hero</code> block in the <code>templates/index.html</code>, you can change the <strong>favicon</strong>.</p>
+<pre data-lang="html" class="language-html "><code class="language-html" data-lang="html">{% extends &quot;juice&#x2F;templates&#x2F;index.html&quot; %}
+{% block favicon %}
+    &lt;link rel=&quot;icon&quot; type=&quot;image&#x2F;png&quot; href=&quot;&#x2F;favicon.ico&quot;&gt;
+{% endblock favicon %}
+</code></pre>
+<h3 id="fonts">Fonts</h3>
+<p>If you changed the <code>--xy-font-family</code>-variable in <code>_variables.html</code>, you have to load the mentioned fonts in the <code>templates/index.html</code>.</p>
+<pre data-lang="html" class="language-html "><code class="language-html" data-lang="html">{% extends &quot;juice&#x2F;templates&#x2F;index.html&quot; %}
+{% block fonts %}
+    &lt;link href=&quot;https:&#x2F;&#x2F;cdn.jsdelivr.net&#x2F;npm&#x2F;fork-awesome@1.2.0&#x2F;css&#x2F;fork-awesome.min.css&quot; rel=&quot;stylesheet&quot; crossorigin=&quot;anonymous&quot;&gt;
+    &lt;link href=&quot;https:&#x2F;&#x2F;fonts.googleapis.com&#x2F;css2?family=Babylonica&amp;display=swap&quot; rel=&quot;stylesheet&quot;&gt;
+{% endblock fonts %}
+</code></pre>
+<h1 id="configuration">Configuration</h1>
+<p>You can customize some builtin property in <code>config.toml</code> file:</p>
+<pre data-lang="toml" class="language-toml "><code class="language-toml" data-lang="toml">[extra]
+juice_logo_name = &quot;Juice&quot;
+juice_logo_path = &quot;juice.svg&quot;
+juice_extra_menu = [
+    { title = &quot;Github&quot;, link = &quot;https:&#x2F;&#x2F;github.com&#x2F;huhu&#x2F;juice&quot;}
+]
+repository_url = &quot;https:&#x2F;&#x2F;github.com&#x2F;huhu&#x2F;juice&quot;
+</code></pre>
+<h1 id="shortcodes">Shortcodes</h1>
+<p><strong>Juice</strong> have some builtin shortcodes available in <code>templates/shortcodes</code> directory. </p>
+<ul>
+<li><code>issue(id)</code> - A shortcode to render issue url, e.g. <code>issue(id=1)</code> would render to the link <code>https://github.com/huhu/juice/issue/1</code>.</li>
+</ul>
+<blockquote>
+<p>The <code>repository_url</code> is required.</p>
+</blockquote>
+<h1 id="showcases">Showcases</h1>
+<p>Please see the <a href="/showcases">showcases page</a>.</p>
+<h1 id="contributing">Contributing</h1>
+<p>Thank you very much for considering contributing to this project!</p>
+<p>We appreciate any form of contribution:</p>
+<ul>
+<li>New issues (feature requests, bug reports, questions, ideas, ...)</li>
+<li>Pull requests (documentation improvements, code improvements, new features, ...)</li>
+</ul>
+
+            
+        </div>
+
+        
+        
+    </main>
+
+    
+    <footer>
+        <small class="subtext">
+            <a href="https://huhu.io">Huhu.io</a> © 2021
+        </small>
+    </footer>
+    
+</body>
+
+</html>

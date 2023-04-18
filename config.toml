@@ -27,4 +27,3 @@ juice_extra_menu = [
 juice_exclude_menu = [
     "exclude_from_nav"
 ]
-repository_url = "https://github.com/huhu/juice"

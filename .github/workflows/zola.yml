@@ -1,15 +1,21 @@
-# On every push this script is executed
-on: push
-name: Build and deploy GH Pages
+name: Deploy
+on:
+  push:
+    branches: [main]
 jobs:
-  build:
+  docs:
+    name: Deploy docs
     runs-on: ubuntu-latest
-    # if: github.ref == 'refs/origin/main'  # changed from 'refs/heads/main'
     steps:
-      - name: checkout
-        uses: actions/checkout@v3.0.0
-      - name: build_and_deploy
-        uses: shalzz/zola-deploy-action@v0.17.2
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Build
+        uses: shalzz/zola-deploy-action@master
         env:
-          # Or if publishing to the same repo, use the automatic token
-          TOKEN: ${{ secrets.WEBSITE_TOKEN_JD }}
+          BUILD_ONLY: true
+      - name: Deploy
+        if: ${{ success() }}
+        uses: JamesIves/github-pages-deploy-action@4.1.0
+        with:
+          branch: gh-pages
+          folder: public

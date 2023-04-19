@@ -3,20 +3,14 @@ on:
   push:
     branches: [main]
 jobs:
-  docs:
-    name: Deploy docs
+  build_and_deploy:
     runs-on: ubuntu-latest
     if: github.ref == 'refs/heads/main'
     steps:
-      - name: Checkout
-        uses: actions/checkout@v2
-      - name: Build
-        uses: shalzz/zola-deploy-action@master
+      - name: Checkout main
+        uses: actions/checkout@v3.0.0
+      - name: Build and deploy
+        uses: shalzz/zola-deploy-action@v0.17.2
         env:
-          BUILD_ONLY: true
-      - name: Deploy
-        if: ${{ success() }}
-        uses: JamesIves/github-pages-deploy-action@4.1.0
-        with:
-          branch: gh-pages
-          folder: public
+          PAGES_BRANCH: gh-pages
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

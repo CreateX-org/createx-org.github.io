@@ -1,7 +1,7 @@
 # The URL the site will be built for
 base_url = "/"
 
-title = "Juice - An intuitive, elegant, and lightweight Zola theme for product sites."
+title = "CreateX Workshop."
 # default_language = "en"
 
 # Whether to automatically compile all Sass files in the sass directory
@@ -22,6 +22,6 @@ logo_name = "CreateX"
 logo_path = "logo.png"
 
 # Add page titles here to exclude them from the nav section (case sensitive)
-juice_exclude_menu = [
+exclude_menu = [
     "exclude_from_nav"
 ]

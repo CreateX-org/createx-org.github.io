@@ -18,8 +18,8 @@ highlight_code = false
 #highlight_theme = "inspired-github"
 
 [extra]
-juice_logo_name = "Juice"
-juice_logo_path = "juice.svg"
+logo_name = "CreateX"
+logo_path = "logo.png"
 
 # Add page titles here to exclude them from the nav section (case sensitive)
 juice_exclude_menu = [

@@ -3,15 +3,7 @@ title = "Juice"
 sort_by = "weight"
 +++
 
-# Juice
-
-**Juice** is an intuitive, elegant, and responsive Zola theme for product sites.
-
-- Build for product sites
-- Simple and intuitive structure
-- Clean and elegant design
-- Responsive and mobile device compatible
-- Customize and extend friendly
+# CreateX
 
 # Installation
 

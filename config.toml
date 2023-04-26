@@ -1,27 +1,24 @@
 # The URL the site will be built for
-base_url = "/"
+base_url = "https://createx-org.github.io/"
 
 title = "CreateX Workshop."
-# default_language = "en"
-
-# Whether to automatically compile all Sass files in the sass directory
 compile_sass = true
-
-# Whether to build a search index to be used later on by a JavaScript library
 build_search_index = false
 
-# Configuration of the Markdown rendering
 [markdown]
-# Whether to do syntax highlighting
-# Theme can be customised by setting the `highlight_theme` variable to a theme supported by Zola
-highlight_code = false
-#highlight_theme = "inspired-github"
+highlight_code = true
+#highlight_theme = "idle"
+highlight_theme = "ir-white"
+
+render_emoji = false
+external_links_target_blank = true # rel="noopener"
+external_links_no_follow = false   # rel="nofollow"
+external_links_no_referrer = false # rel="noreferrer"
+smart_punctuation = false          # `...` to `…`, `"quote"` to `“curly”` etc
 
 [extra]
 logo_name = "CreateX"
 logo_path = "logo.png"
 
 # Add page titles here to exclude them from the nav section (case sensitive)
-exclude_menu = [
-    "exclude_from_nav"
-]
+exclude_menu = []

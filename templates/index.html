@@ -13,9 +13,9 @@
     <link href="https://fonts.googleapis.com/css?family=Alfa+Slab+One&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Fira+Sans:400,500,600&display=swap" rel="stylesheet">
     {% endblock fonts %}
-    <link rel="stylesheet" href="/normalize.css">
+    <link rel="stylesheet" href="{{ get_url(path="normalize.css") }}">
     <link rel="stylesheet" href="{{ get_url(path="style.css") }}">
-    <script src="scripts.js"></script>
+    <script defer src="{{ get_url(path="scripts.js") }}"></script>
     {% block head %}
     {% endblock head %}
 </head>
@@ -31,17 +31,17 @@
         {% block hero %}
         <section class="text-center">
             <h1 class="heading-text">
-                Build your static website
+                Workshop Unterlagen
             </h1>
             <h3 class="title-text">
-                <b>CreateX</b> Workshop Unterlagen.
+                
             </h3>
         </section>
         <img class="hero-image" src="{{ get_url(path="logo.png") }}">
 
         <div class="explore-more text"
             onclick="scroll_into_view()">
-            Explore More ⇩
+            Hier geht's weiter ⇩
         </div>
         {% endblock hero %}
     </div>
@@ -77,7 +77,6 @@
 
         <div class="content text">
             {% block content %}
-            <div id="features" class="heading-text">Overview</div>
             {{ section.content | safe }}
             {% endblock content %}
         </div>

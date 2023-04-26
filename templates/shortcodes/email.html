@@ -1,0 +1,4 @@
+{%- set base64_email = email -%}
+<a class="m-protected" href="#{{ base64_email | base64_encode }}" target="_blank" title="Mail"><i type="Button" class="svg mail" title="Mail"></i></span></a>
+<a class="m-protected" href="#{{ base64_email | base64_encode }}" target="_blank" title="Mail"><span class="m-protected-innertext">#{{ base64_email | base64_encode }}</span></a>
+{# After changing this you need to run `npm run noswitchernosearch` #}

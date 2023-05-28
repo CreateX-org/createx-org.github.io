@@ -20,7 +20,7 @@ Für eure eigenen Projekte stehen euch verschiedene Elemente/ Bauteile zur Verf�
 
 
 ## 3.1 Inputs
-Ein "Input" für einen Mikrocontroller bezieht sich auf ein Signal oder eine Information, die in den Mikrocontroller eingegeben oder eingelesen wird. Typischerweise werden Inputs in Form von elektrischen Signalen oder Spannungen bereitgestellt. Diese können von verschiedenen Quellen stammen, wie z.B. Sensoren, Tasten, Schaltern oder anderen Mikrocontrollern.
+Ein "Input" ist ein Signal oder eine Information, die in den Mikrocontroller eingegeben oder eingelesen wird. Typischerweise werden Inputs in Form von elektrischen Signalen oder Spannungen bereitgestellt. Diese können von verschiedenen Quellen stammen, wie z.B. Sensoren, Tasten, Schaltern oder anderen Mikrocontrollern.
 
 
 ### 3.1.1 Time of Flight (TOF) Distanz Sensor
@@ -39,14 +39,14 @@ In der Arduino IDE muss noch "Adafruit_VL53L0X" installiert werden.
 <img src="/images/Arduino_install_tof.png" width = 300px/>
 
 
-Für beide folgende Beispiele benötigen wir den folgenden Schaltkreis:
+Für beide folgenden Beispiele nutzen wir diesen Schaltkreis:
 ![](/images/input_TOF_output_Serial.png)
 
 #### 3.1.1.1 Eine gemessene Distanz am Monitor auslesen
 
 - Pfad: `projects/inputs/input_TOF/input_TOF_output_Serial`
   
-Um den gemessenen Abstand zu sehen, müssen wir das Ergebnis des Sensor zunächst an einen Monitor senden. Wenn wir den Arduino dann mit einem Computer verbinden können wir auf dem Seriellen Monitor der Arduino IDE das Ergebnis der Messung sehen.
+Um den gemessenen Abstand zu sehen, müssen wir das Ergebnis des Sensor zunächst an einen Monitor senden. Wenn wir den Arduino dann mit einem Computer verbinden, können wir auf dem Seriellen Monitor der Arduino IDE das Ergebnis der Messung sehen.
 
 ![](/images/IDE_SeriellerMonitor.png)
 

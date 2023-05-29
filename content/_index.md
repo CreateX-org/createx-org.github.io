@@ -36,11 +36,12 @@ In der Arduino IDE muss noch "Adafruit_VL53L0X" installiert werden.
 2. Nach "Adafruit_VL53L0X" suchen
 3. Installieren
 
-<img src="/images/Arduino_install_tof.png" width = 300px/>
+<img src="/images/Arduino_install_tof.png" width = 50%/>
 
 
 Für beide folgenden Beispiele nutzen wir diesen Schaltkreis:
-![](/images/input_TOF_output_Serial.png)
+
+<img src="/images/input_TOF_output_Serial.png" width = 100%/>
 
 #### 3.1.1.1 Eine gemessene Distanz am Monitor auslesen
 
@@ -48,7 +49,7 @@ Für beide folgenden Beispiele nutzen wir diesen Schaltkreis:
   
 Um den gemessenen Abstand zu sehen, müssen wir das Ergebnis des Sensor zunächst an einen Monitor senden. Wenn wir den Arduino dann mit einem Computer verbinden, können wir auf dem Seriellen Monitor der Arduino IDE das Ergebnis der Messung sehen.
 
-![](/images/IDE_SeriellerMonitor.png)
+<img src="/images/IDE_SeriellerMonitor.png" width = 80%/>
 
 
 
@@ -76,7 +77,7 @@ Ein "Output" ist ein Signal oder eine Information, die der Mikrocontroller gener
 Ein Button und eine LED (bzw. später 2) werden mit dem Arduino verbunden.
 Wenn der Button gedrückt wird, geht die LED an (bzw. später die andere auch aus).
 
-![](/images/Button_and_2_LEDs.png)
+<img src="/images/Button_and_2_LEDs.png" width = 100%/>
 
 ### 3.2.2 LED Streifen "Neopixel"
 - Pfad: `projects/outputs/simple_demo_neopixel_button`
@@ -92,9 +93,9 @@ In der Arduino IDE muss noch "Adafruit Neopixel" installiert werden.
 2. Nach "Adafruit Neopixel" suchen
 3. Installieren
 
-<img src="/images/Arduino_install_neopixel.png" width = 300px/>
+<img src="/images/Arduino_install_neopixel.png" width = 50%/>
 
-![](/images/Button_and_Neopixel.png)
+<img src="/images/Button_and_Neopixel.png" width = 100%/>
 
 ### 3.2.3 Servo Motor
 - Pfad: `projects/outputs/simple_demo_servo_button`
@@ -102,8 +103,7 @@ In der Arduino IDE muss noch "Adafruit Neopixel" installiert werden.
 Ein Button und ein Servo Motor (sozusagen ein Motor, der in eine festgelegte Position gedreht werden kann und sich nicht einfach nur dreht, bis man den Strom abstellt) werden mit dem Arduino verbunden.
 Wenn der Button gedrückt wird, dreht sich der Servo weiter.
 
-
-![](/images/Button_and_Servo.png)
+<img src="/images/Button_and_Servo.png" width = 100%/>
 
 
 ### 3.2.4 Weitere Outputs

@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Projekte | CreateX Workshop. </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <link rel="icon" type="image/png" href="/favicon.ico">
+    
+    
+    <link href="https://fonts.googleapis.com/css?family=Alfa+Slab+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Fira+Sans:400,500,600&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://createx-org.github.io/normalize.css">
+    <link rel="stylesheet" href="https://createx-org.github.io/style.css">
+    <script defer src="https://createx-org.github.io/scripts.js"></script>
+    
+    
+</head>
+
+<body>
+    
+<header class="box-shadow">
+    
+
+<a href="https://createx-org.github.io/">
+    <div class="logo">
+        <img src="https://createx-org.github.io/logo.png" alt="logo">
+        CreateX
+    </div>
+</a>
+
+<nav>
+    
+    
+    
+    <a class="nav-item subtitle-text" href="https://createx-org.github.io/projects/">Projekte</a>
+    
+    
+    
+</nav>
+
+</header>
+
+
+    <main>
+        
+        
+        
+        
+        
+        <div class="toc">
+            <div class="toc-sticky">
+                
+                <div class="toc-item">
+                    <a class="subtext" href="https://createx-org.github.io/projects/#1-projektdateien">1. Projektdateien</a>
+                </div>
+                
+                
+                <div class="toc-item">
+                    <a class="subtext" href="https://createx-org.github.io/projects/#2-projekte">2. Projekte</a>
+                </div>
+                
+                
+                <div class="toc-item-child">
+                    <a class="subtext" href="https://createx-org.github.io/projects/#2-1-inputs"><small>- 2.1 Inputs</small></a>
+                </div>
+                
+                <div class="toc-item-child">
+                    <a class="subtext" href="https://createx-org.github.io/projects/#2-2-outputs"><small>- 2.2 Outputs</small></a>
+                </div>
+                
+                
+                
+            </div>
+        </div>
+        
+        
+
+        <div class="content text">
+            
+<div class="heading-text">Projekte, die wir bauen können</div>
+<h1 id="1-projektdateien">1. Projektdateien</h1>
+<p>Um nicht von Null beginnen zu müssen, haben wir bereits ein Dateien vorbereiten, die uns als Grundlage für die Projekte dienen werden. Darin finden sich für verschiedene Bauteile Beispiele mit Erklärungen.</p>
+<ul>
+<li><a rel="noopener" target="_blank" href="https://github.com/CreateX-org/workshop">Code auf github.com</a>, dort befinden sich die Dateien in verschiedenen Ordnern.</li>
+<li><a rel="noopener" target="_blank" href="https://github.com/CreateX-org/workshop/archive/refs/heads/main.zip">Download als .zip Datei</a>, um die Dateien in die Arduino IDE zu laden und auf den Microcontroller zu übertragen.</li>
+</ul>
+<h1 id="2-projekte">2. Projekte</h1>
+<p>Für eure eigenen Projekte stehen euch verschiedene Elemente/ Bauteile zur Verfügung die ihr mit dem Microntroller verbinden und dadurch steuern bzw. auslesen könnt. Diese gliedern sich in Input (zB Sensoren) und Output (zB LEDs).</p>
+<h2 id="2-1-inputs">2.1 Inputs</h2>
+<p>Ein &quot;Input&quot; ist ein Signal oder eine Information, die in den Mikrocontroller eingegeben oder eingelesen wird. Typischerweise werden Inputs in Form von elektrischen Signalen oder Spannungen bereitgestellt. Diese können von verschiedenen Quellen stammen, wie z.B. Sensoren, Tasten, Schaltern oder anderen Mikrocontrollern.</p>
+<h3 id="2-1-1-time-of-flight-tof-distanz-sensor">2.1.1 Time of Flight (TOF) Distanz Sensor</h3>
+<ul>
+<li>Pfad: <code>projects/inputs/input_TOF</code></li>
+</ul>
+<p>Ein Time of Flight Sensor berechnet den Abstand zu einem Objekt durch Messung der Zeit, die das Licht braucht, um vom Sensor zum Objekt und wieder zurück zu kommen.</p>
+<p><strong>WICHTIG</strong>:
+In der Arduino IDE muss noch &quot;Adafruit_VL53L0X&quot; installiert werden.</p>
+<ol>
+<li>Auf den &quot;Library Manager&quot; klicken (ganz links das Icon mit den Büchern)</li>
+<li>Nach &quot;Adafruit_VL53L0X&quot; suchen</li>
+<li>Installieren</li>
+</ol>
+<img src="/images/Arduino_install_tof.png" width = 50%/>
+<p>Für beide folgenden Beispiele nutzen wir diesen Schaltkreis:</p>
+<img src="/images/input_TOF_output_Serial.png" width = 100%/>
+<h4 id="2-1-1-1-eine-gemessene-distanz-am-monitor-auslesen">2.1.1.1 Eine gemessene Distanz am Monitor auslesen</h4>
+<ul>
+<li>Pfad: <code>projects/inputs/input_TOF/input_TOF_output_Serial</code></li>
+</ul>
+<p>Um den gemessenen Abstand zu sehen, müssen wir das Ergebnis des Sensor zunächst an einen Monitor senden. Wenn wir den Arduino dann mit einem Computer verbinden, können wir auf dem Seriellen Monitor der Arduino IDE das Ergebnis der Messung sehen.</p>
+<img src="/images/IDE_SeriellerMonitor.png" width = 80%/>
+<h4 id="2-1-1-2-distanz-abhangig-eine-led-ein-und-ausschalten">2.1.1.2 Distanz abhängig eine LED ein- und ausschalten</h4>
+<ul>
+<li>Pfad: <code>projects/inputs/input_TOF/input_TOF_output_LED</code></li>
+</ul>
+<p>Wir können auch eine Reaktion auslösen sobald die Distanz unter einen gewissen Wert (zB 2cm) fällt. Wenn sich ein Objekt wie z.B. eine Hand nahe genug am Sensor befindet, leuchtet die LED.</p>
+<h3 id="2-1-2-kapazitiver-touch-sensor">2.1.2 Kapazitiver Touch Sensor</h3>
+<p>Todo.</p>
+<h3 id="2-1-3-weitere-inputs">2.1.3 Weitere Inputs</h3>
+<p>Natürlich stehen euch auch alle weiteren Inputs aus den Fundiono-Koffern der Schule zur Verfügung. Dazu zählen zB Temperatursensoren, Feuchtigkeitssensoren oder Tastenfelder. </p>
+<h2 id="2-2-outputs">2.2 Outputs</h2>
+<p>Ein &quot;Output&quot; ist ein Signal oder eine Information, die der Mikrocontroller generiert oder ausgibt. Es handelt sich um die Reaktion des Mikrocontrollers auf interne Berechnungen oder Benutzereingaben. Den Output legeen wir duch den Code mit dem wir den Microntroller programmieren fest.</p>
+<h3 id="2-2-1-led-2-leds">2.2.1 LED / 2 LEDs</h3>
+<ul>
+<li>Pfad: <code>projects/outputs/simple_demo_leds_button</code></li>
+</ul>
+<p>Ein Button und eine LED (bzw. später 2) werden mit dem Arduino verbunden.
+Wenn der Button gedrückt wird, geht die LED an (bzw. später die andere auch aus).</p>
+<img src="/images/Button_and_2_LEDs.png" width = 100%/>
+<h3 id="2-2-2-led-streifen-neopixel">2.2.2 LED Streifen &quot;Neopixel&quot;</h3>
+<ul>
+<li>Pfad: <code>projects/outputs/simple_demo_neopixel_button</code></li>
+</ul>
+<p>Ein Button und ein LED Streifen &quot;Neopixel&quot; werden mit dem Arduino verbunden.
+Wenn der Button kurz gedrückt wird, springt die LED eins weiter.
+Bei Gedrückthalten, springt die LED mit einer kurzen Verzögerung kontinuierlich weiter.</p>
+<p><strong>WICHTIG</strong>:
+In der Arduino IDE muss noch &quot;Adafruit Neopixel&quot; installiert werden.</p>
+<ol>
+<li>Auf den &quot;Library Manager&quot; klicken (ganz links das Icon mit den Büchern)</li>
+<li>Nach &quot;Adafruit Neopixel&quot; suchen</li>
+<li>Installieren</li>
+</ol>
+<img src="/images/Arduino_install_neopixel.png" width = 50%/>
+<img src="/images/Button_and_Neopixel.png" width = 100%/>
+<h3 id="2-2-3-servo-motor">2.2.3 Servo Motor</h3>
+<ul>
+<li>Pfad: <code>projects/outputs/simple_demo_servo_button</code></li>
+</ul>
+<p>Ein Button und ein Servo Motor (sozusagen ein Motor, der in eine festgelegte Position gedreht werden kann und sich nicht einfach nur dreht, bis man den Strom abstellt) werden mit dem Arduino verbunden.
+Wenn der Button gedrückt wird, dreht sich der Servo weiter.</p>
+<img src="/images/Button_and_Servo.png" width = 100%/>
+<h3 id="2-2-4-weitere-outputs">2.2.4 Weitere Outputs</h3>
+<p>Auch weitere Outputs finden sich in den Fundiono-Koffern der Schule. Dazu zählen zB Lautsprecher, ein Ampelmodul oder LCD Modul. </p>
+<pre data-linenos data-lang="c" style="background-color:#ffffff;color:#010101;" class="language-c "><code class="language-c" data-lang="c"><table><tbody><tr><td>1</td><td><span>serial.</span><span style="color:#696989;">println</span><span>(</span><span style="color:#009f78;">&quot;Test&quot;</span><span>);
+</span></td></tr><tr><td>2</td><td><span>pin.</span><span style="color:#696989;">output</span><span>(HIGH);
+</span></td></tr></tbody></table></code></pre>
+
+
+        </div>
+
+        
+        
+    </main>
+
+    
+    <footer>
+        <small class="subtext">
+            <a href="https://github.com/createx-org">github.com/createx-org</a>
+        </small>
+    </footer>
+    
+</body>
+
+</html>

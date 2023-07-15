@@ -6,16 +6,16 @@ weight = 1
 
 
 # 1. Projektdateien
-Um nicht von Null beginnen zu müssen, haben wir bereits ein Dateien vorbereiten, die uns als Grundlage für die Projekte dienen werden. Darin finden sich für verschiedene Bauteile Beispiele mit Erklärungen.
+Um nicht von Null beginnen zu müssen, haben wir bereits einige Dateien vorbereitet, die uns als Grundlage für die Projekte dienen werden. Darin finden sich für verschiedene Bauteile Beispiele mit Erklärungen.
 - [Code auf github.com](https://github.com/CreateX-org/workshop), dort befinden sich die Dateien in verschiedenen Ordnern.
 - [Download als .zip Datei](https://github.com/CreateX-org/workshop/archive/refs/heads/main.zip), um die Dateien in die Arduino IDE zu laden und auf den Microcontroller zu übertragen.
 
 # 2. Projekte
-Für eure eigenen Projekte stehen euch verschiedene Elemente/ Bauteile zur Verfügung die ihr mit dem Microntroller verbinden und dadurch steuern bzw. auslesen könnt. Diese gliedern sich in Input (zB Sensoren) und Output (zB LEDs).
+Für eure eigenen Projekte stehen euch verschiedene Elemente bzw. Bauteile zur Verfügung, die ihr mit dem Microcontroller verbinden und dadurch steuern oder auslesen könnt. Diese gliedern sich in Input (z.B. Sensoren) und Output (z.B. LEDs).
 
 
 ## 2.1 Inputs
-Ein "Input" ist ein Signal oder eine Information, die in den Mikrocontroller eingegeben oder eingelesen wird. Typischerweise werden Inputs in Form von elektrischen Signalen oder Spannungen bereitgestellt. Diese können von verschiedenen Quellen stammen, wie z.B. Sensoren, Tasten, Schaltern oder anderen Mikrocontrollern.
+Ein "Input" ist ein Signal oder eine Information, die in den Microcontroller eingegeben oder eingelesen wird. Typischerweise werden Inputs in Form von elektrischen Signalen oder Spannungen bereitgestellt. Diese können von verschiedenen Quellen stammen wie z.B. Sensoren, Tasten, Schaltern oder anderen Microcontrollern.
 
 
 ### 2.1.1 Time of Flight (TOF) Distanz Sensor
@@ -56,7 +56,7 @@ Die Pins sind von links nach rechts wie folgt belegt:
 
 - Pfad: `projects/inputs/input_TOF/input_TOF_output_Serial`
   
-Um den gemessenen Abstand zu sehen, müssen wir das Ergebnis des Sensor zunächst an einen Monitor senden. Wenn wir den Arduino dann mit einem Computer verbinden, können wir auf dem Seriellen Monitor der Arduino IDE das Ergebnis der Messung sehen.
+Um den gemessenen Abstand zu sehen, müssen wir das Messergebnis des Sensors zunächst vom Microcontroller and den Computer senden. Dies erfolgt über eine sogenannte "serielle Schnittstelle", also USB (Universal **Serial** Bus). Dort können wir es auf dem seriellen Monitor der Arduino IDE sehen.
 
 <img src="/images/IDE_SeriellerMonitor.png" width = 80%/>
 
@@ -66,7 +66,7 @@ Um den gemessenen Abstand zu sehen, müssen wir das Ergebnis des Sensor zunächs
 
 - Pfad: `projects/inputs/input_TOF/input_TOF_output_LED`
 
-Wir können auch eine Reaktion auslösen sobald die Distanz unter einen gewissen Wert (zB 2cm) fällt. Wenn sich ein Objekt wie z.B. eine Hand nahe genug am Sensor befindet, leuchtet die LED.
+Wir können auch eine Reaktion auslösen, sobald die Distanz unter einen gewissen Wert (z.B. 2 cm) fällt. Wenn sich ein Objekt wie z.B. eine Hand nahe genug am Sensor befindet, leuchtet die LED.
 
 
 ### 2.1.2 Kapazitiver Touch Sensor
@@ -128,16 +128,16 @@ Dazu erweitern wir unseren Schaltkreis um eine LED und einen Widerstand:
 
 
 ### 2.1.3 Weitere Inputs
-Natürlich stehen euch auch alle weiteren Inputs aus den Fundiono-Koffern der Schule zur Verfügung. Dazu zählen zB Temperatursensoren, Feuchtigkeitssensoren oder Tastenfelder. 
+Natürlich stehen euch auch alle weiteren Inputs aus den Fundiono-Koffern der Schule zur Verfügung. Dazu zählen z.B. Temperatursensoren, Feuchtigkeitssensoren oder Tastenfelder. 
 
 
 ## 2.2 Outputs
-Ein "Output" ist ein Signal oder eine Information, die der Mikrocontroller generiert oder ausgibt. Es handelt sich um die Reaktion des Mikrocontrollers auf interne Berechnungen oder Benutzereingaben. Den Output legeen wir duch den Code mit dem wir den Microntroller programmieren fest.
+Ein "Output" ist ein Signal oder eine Information, die der Microcontroller generiert oder ausgibt. Es handelt sich um die Reaktion des Microcontrollers auf interne Berechnungen oder Benutzereingaben. Den Output legen wir duch den Code, mit dem wir den Microntroller programmieren, fest.
 
 ### 2.2.1 LED / 2 LEDs
 - Pfad: `projects/outputs/simple_demo_leds_button`
 
-Ein Button und eine LED (bzw. später 2) werden mit dem Arduino verbunden.
+Ein Button und eine LED (bzw. später zwei LEDs) werden mit dem Arduino verbunden.
 Wenn der Button gedrückt wird, geht die LED an (bzw. später die andere auch aus).
 
 <img src="/images/Button_and_2_LEDs.png" width = 100%/>
@@ -170,11 +170,5 @@ Wenn der Button gedrückt wird, dreht sich der Servo weiter.
 
 
 ### 2.2.4 Weitere Outputs
-Auch weitere Outputs finden sich in den Fundiono-Koffern der Schule. Dazu zählen zB Lautsprecher, ein Ampelmodul oder LCD Modul. 
+Auch weitere Outputs finden sich in den Fundiono-Koffern der Schule. Dazu zählen z.B. Lautsprecher, ein Ampelmodul oder LCD-Modul. 
 
-
-
-```c, linenos
-serial.println("Test");
-pin.output(HIGH);
-```

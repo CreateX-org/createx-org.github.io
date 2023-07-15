@@ -57,7 +57,61 @@ Wir können auch eine Reaktion auslösen sobald die Distanz unter einen gewissen
 
 ### 2.1.2 Kapazitiver Touch Sensor
 
-Todo.
+- Pfad: `projects/inputs/input_Touch`
+
+Ein kapazitiver Touch-Sensor funktioniert auf der Basis von Körperkapazität und Elektrostatik. Wenn ein menschlicher Finger die Oberfläche des Sensors berührt, ändert sich die Kapazität des elektrischen Feldes, da der menschliche Körper selbst als elektrischer Leiter wirkt. Diese Änderung wird vom Sensor erkannt und als Berührung interpretiert.
+
+Der Sensor ähnelt im Anschluss und in der Ansteuerung durch Code einem Taster bzw. Button.
+
+#### 2.1.2.1 Sensor am Seriellen Plotter auslesen
+
+- Pfad: `projects/inputs/input_Touch/input_Touch_output_Plotter`
+  
+<img src="/images/TouchSensor_Plotter.png" width = 80%/>
+
+Um zu testen ob der Sensor eine Berührung wahrnimmt, können wir den Seriellen Plotter der Arduino IDE nutzen. Wenn wir den Arduino dann mit einem Computer verbinden, können wir auf dem Seriellen Plotter der Arduino IDE das Ergebnis der Messung sehen. Wenn wir den Sensor berühren, sehen wir einen Ausschlag um 1, so wie wir es im Code festgelegt haben.
+
+<img src="/images/SeriellerPlotter.png" width = 80%/>
+
+
+
+
+#### 2.1.2.2 Berührungs-abhängig eine LED ein- und ausschalten
+
+- Pfad: `projects/inputs/input_TOF/input_Touch_output_LED`
+
+Wir können auch eine Reaktion auslösen sobald der Sensor eine Berühung wahrnimmt. Wenn wir den Sensor berühren, leuchtet die LED.
+
+Dazu erweitern wir unseren Schaltkreis um eine LED und einen Widerstand:
+<img src="/images/TouchSensor_LED.png" width = 80%/>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 ### 2.1.3 Weitere Inputs
 Natürlich stehen euch auch alle weiteren Inputs aus den Fundiono-Koffern der Schule zur Verfügung. Dazu zählen zB Temperatursensoren, Feuchtigkeitssensoren oder Tastenfelder. 

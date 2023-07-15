@@ -180,10 +180,10 @@ Bedingte Anweisungen in C++ verwenden die `if` (wenn) und `else` (dann) Schlüss
 int x = 10;
 if (x > 5) {
     // Wenn x größer als 5 ist, dann ...
-    std::string << "x ist größer als 5";
+    Serial.println("x ist größer als 5"); // schreiben wir diesen Text in den Seriellen Monitor
 } else {
     // Wenn x nicht größer als 5 ist, dann ...
-    std::string << "x ist nicht größer als 5";
+    Serial.println("x ist nicht größer als 5");
 }
 ```
 
@@ -193,13 +193,13 @@ Für mehrere Bedingungen können wir `else if` verwenden.
 int y = 20;
 if (y > 50) {
     // Wenn y größer als 50 ist, dann ...
-    std::string << "y ist größer als 50";
+    Serial.println("y ist größer als 50");
 } else if (y > 30) {
     // Wenn y nicht größer als 50 ist, aber wenn y größer als 30 ist, dann ...
-    std::string << "y ist größer als 30, aber nicht größer als 50";
+    Serial.println("y ist größer als 30, aber nicht größer als 50");
 } else {
     // Wenn y nicht größer als 50 ist und nicht größer als 30 ist, dann ...
-    std::string << "y ist nicht größer als 30";
+    Serial.println("y ist nicht größer als 30");
 }
 ```
 
@@ -211,9 +211,12 @@ Es gibt verschiedene Arten von Schleifen in C++, aber die gebräuchlichsten sind
 
 ```cpp
 // i ist eine Variable, die wir in der Schleife verwenden
-for(int i = 0; i < 10; i++) { // wir beginnen mit i=0, die Schleife wird ausgeführt, solange i kleiner als 10 ist, i wird nach jedem Durchlauf um 1 erhöht
+// wir beginnen mit i=0,
+// die Schleife wird ausgeführt, solange i kleiner als 10 ist, 
+// i wird nach jedem Durchlauf um 1 erhöht
+for(int i = 0; i < 10; i++) { 
     // In der Schleife stehen uns dann die Zahlen von 0 bis 9 zur Verfügung
-    Serial.println(i) // druckt die Zahlen von 0 bis 9
+    Serial.println(i);
 }
 ```
 
@@ -223,30 +226,29 @@ for(int i = 0; i < 10; i++) { // wir beginnen mit i=0, die Schleife wird ausgef�
 int j = 0;
 // solange j kleiner als 10 ist, wird der Code in der Schleife ausgeführt
 while(j < 10) {
-    Serial.println(i) // druckt die Zahlen von 0 bis 9
+    Serial.println(i);
     j++; // damit die Schleife nicht ewig läuft, erhöhen wir j nach jedem Durchlauf um 1 
 }
 ```
 
-Arrays sind eine der wichtigsten Datenstrukturen in C++. Ein Array ist eine Sammlung von Elementen, die denselben Datentyp haben und sequentiell im Speicher angeordnet sind. Die Größe eines Arrays ist bei der Erstellung festgelegt und kann später nicht geändert werden.
-
 **Arrays (Sammlung bzw. Liste)**
 
-Arrays sind eine der wichtigsten Datenstrukturen in C++. Ein Array ist eine Sammlung von Elementen, die denselben Datentyp haben. Also z.B. eine Liste von Zahlen oder eine Liste von Zeichenketten.
+Ein Array ist eine Sammlung von Elementen, die denselben Datentyp haben. Also z.B. eine Liste von Zahlen oder eine Liste von Zeichenketten.
 Die Größe eines Arrays ist bei der Erstellung festgelegt und kann später nicht geändert werden.
 
 ```cpp
-int myArray[5]; // Deklaration eines Arrays von Integern mit einer Länge von 5
+int myArray[5]; //ein Array von Integern mit einer Länge von 5
 ```
 
 Wir dem Array auch Werte zuweisen:
 
 ```cpp
-int myArray[5] = {1, 2, 3, 4, 5}; // Deklaration und Initialisierung eines Arrays
+int myArray[5] = {1, 2, 3, 4, 5}; // ein Array in dem wir 5 Elemente speichern
 ```
 
 Wenn wir auf die einzelnen Elemente eines Arrays zugreifen, dann tun wir dies indem wir den Index des Elements angeben. Der Index beschreibt also die Stelle des Elements in der Liste.
-Wichtig ist, dass wie bei den meisten Programmiersprachen, der Index bei 0 und nicht bei 1 beginnt. Das erste Element hat also den Index 0, das zweite Element den Index 1, usw.
+Wichtig ist, dass der Index bei 0 und nicht bei 1 beginnt. Dies ist bei den meisten Programmiersprachen der Fall. 
+Das erste Element hat also den Index 0, das zweite Element den Index 1, usw.
 
 ```cpp
 // Gibt das erste Element des Arrays aus 

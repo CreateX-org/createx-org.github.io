@@ -38,6 +38,20 @@ Für beide folgenden Beispiele nutzen wir diesen Schaltkreis:
 
 <img src="/images/input_TOF_output_Serial.png" width = 100%/>
 
+**Pinbelegung**
+
+<img src="/images/ToF.jpg" width = 50%/>
+
+Die Pins sind von links nach rechts wie folgt belegt:
+* **GND**
+* 5V
+* **G26/SCL (Clock)**
+* G36
+* **G0/SDA (Data)**
+* BAT
+* **3V3**
+* 5V
+
 #### 2.1.1.1 Eine gemessene Distanz am Monitor auslesen
 
 - Pfad: `projects/inputs/input_TOF/input_TOF_output_Serial`

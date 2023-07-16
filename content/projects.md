@@ -174,7 +174,7 @@ std::string myString = "Hallo Welt"; // Eine Zeichenkette (string)
 
 **Bedingungen (if, else)**
 
-Bedingte Anweisungen in C++ verwenden die `if` (wenn) und `else` (dann) Schlüsselwörter. Bedingte Anweisungen können wir nutzen um zu entscheiden, ob ein Codeblock ausgeführt werden soll oder nicht.
+Bedingte Anweisungen in C++ verwenden die `if` (wenn) und `else` (sonst) Schlüsselwörter. Bedingte Anweisungen können wir nutzen, um zu entscheiden, ob ein Codeblock ausgeführt werden soll oder nicht.
 
 ```cpp
 int x = 10;
@@ -240,13 +240,14 @@ Die Größe eines Arrays ist bei der Erstellung festgelegt und kann später nich
 int myArray[5]; //ein Array von Integern mit einer Länge von 5
 ```
 
-Wir dem Array auch Werte zuweisen:
+Wir können dem Array auch direkt Werte zuweisen:
 
 ```cpp
 int myArray[5] = {1, 2, 3, 4, 5}; // ein Array in dem wir 5 Elemente speichern
 ```
 
-Wenn wir auf die einzelnen Elemente eines Arrays zugreifen, dann tun wir dies indem wir den Index des Elements angeben. Der Index beschreibt also die Stelle des Elements in der Liste.
+Wenn wir auf die einzelnen Elemente eines Arrays zugreifen, dann tun wir dies, indem wir den Index des Elements in eckigen Klammernangeben.
+Der Index beschreibt also die Stelle des Elements in der Liste.
 Wichtig ist, dass der Index bei 0 und nicht bei 1 beginnt. Dies ist bei den meisten Programmiersprachen der Fall. 
 Das erste Element hat also den Index 0, das zweite Element den Index 1, usw.
 

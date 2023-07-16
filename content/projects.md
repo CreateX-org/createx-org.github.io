@@ -6,7 +6,7 @@ weight = 1
 
 
 # 1. Projektdateien
-Um nicht von Null beginnen zu müssen, haben wir bereits einige Dateien vorbereitet, die uns als Grundlage für die Projekte dienen werden. Darin finden sich für verschiedene Bauteile Beispiele mit Erklärungen.
+Um nicht von Null beginnen zu müssen, haben wir bereits einige Dateien vorbereitet, die uns als Grundlage für die Projekte dienen werden. Darin finden sich für verschiedene Bauteile Codebeispiele mit Erklärungen.
 - [Code auf github.com](https://github.com/CreateX-org/workshop), dort befinden sich die Dateien in verschiedenen Ordnern.
 - [Download als .zip Datei](https://github.com/CreateX-org/workshop/archive/refs/heads/main.zip), um die Dateien in die Arduino IDE zu laden und auf den Microcontroller zu übertragen.
 
@@ -56,13 +56,13 @@ Die Pins sind von links nach rechts wie folgt belegt:
 
 - Pfad: `projects/inputs/input_TOF/input_TOF_output_Serial`
   
-Um den gemessenen Abstand zu sehen, müssen wir das Messergebnis des Sensors zunächst vom Microcontroller and den Computer senden. Dies erfolgt über eine sogenannte "serielle Schnittstelle", also USB (Universal **Serial** Bus). Dort können wir es auf dem seriellen Monitor der Arduino IDE sehen.
+Um den gemessenen Abstand zu sehen, müssen wir das Messergebnis des Sensors zunächst vom Microcontroller an den Computer senden. Dies erfolgt über eine sogenannte "serielle Schnittstelle", also USB (Universal **Serial** Bus). Dort können wir es auf dem seriellen Monitor der Arduino IDE sehen.
 
 <img src="/images/IDE_SeriellerMonitor.png" width = 80%/>
 
 
 
-### 2.1.2 Distanz abhängig eine LED ein- und ausschalten
+### 2.1.2 Distanzabhängig eine LED ein- und ausschalten
 
 - Pfad: `projects/inputs/input_TOF/input_TOF_output_LED`
 
@@ -83,14 +83,14 @@ Der Sensor ähnelt im Anschluss und in der Ansteuerung durch Code einem Taster b
   
 <img src="/images/TouchSensor_Plotter.png" width = 70%/>
 
-Um zu testen ob der Sensor eine Berührung wahrnimmt, können wir den Seriellen Plotter der Arduino IDE nutzen. Wenn wir den Arduino dann mit einem Computer verbinden, können wir auf dem Seriellen Plotter der Arduino IDE das Ergebnis der Messung sehen. Wenn wir den Sensor berühren, sehen wir einen Ausschlag um 1, so wie wir es im Code festgelegt haben.
+Um zu testen ob der Sensor eine Berührung wahrnimmt, können wir den Seriellen Plotter der Arduino IDE nutzen. Wenn wir den Arduino dann mit einem Computer verbinden, können wir auf dem Seriellen Plotter der Arduino IDE das Ergebnis der Messung sehen. Wenn wir den Sensor berühren, sehen wir einen Wechsel von 0 auf 1, so wie wir es im Code festgelegt haben.
 
 <img src="/images/SeriellerPlotter.png" width = 100%/>
 
 
 
 
-### 2.2.2 Berührungs-abhängig eine LED ein- und ausschalten
+### 2.2.2 Berührungsabhängig eine LED ein- und ausschalten
 
 - Pfad: `projects/inputs/input_TOF/input_Touch_output_LED`
 

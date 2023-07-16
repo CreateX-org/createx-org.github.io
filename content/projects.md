@@ -147,3 +147,7 @@ Wenn der Button gedrückt wird, dreht sich der Servo weiter.
 ## 2.4 Weitere Outputs
 Auch weitere Outputs finden sich in den Fundiono-Koffern der Schule. Dazu zählen z.B. Lautsprecher, ein Ampelmodul oder LCD-Modul. 
 
+
+# Arduino UNO Pinbelegung
+Quelle: [https://docs.arduino.cc/hardware/uno-rev3](https://docs.arduino.cc/hardware/uno-rev3)
+<img src="https://docs.arduino.cc/static/2b141eb1cfe6f465a949c203e4af1b5f/A000066-pinout.png" width=100%>

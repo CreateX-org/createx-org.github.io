@@ -10,15 +10,15 @@ Um nicht von Null beginnen zu müssen, haben wir bereits einige Dateien vorberei
 - [Code auf github.com](https://github.com/CreateX-org/workshop), dort befinden sich die Dateien in verschiedenen Ordnern.
 - [Download als .zip Datei](https://github.com/CreateX-org/workshop/archive/refs/heads/main.zip), um die Dateien in die Arduino IDE zu laden und auf den Microcontroller zu übertragen.
 
-# 2. Projekte
+
+
+# 2. Projekte – Inputs
 Für eure eigenen Projekte stehen euch verschiedene Elemente bzw. Bauteile zur Verfügung, die ihr mit dem Microcontroller verbinden und dadurch steuern oder auslesen könnt. Diese gliedern sich in Input (z.B. Sensoren) und Output (z.B. LEDs).
 
-
-## 2.1 Inputs
 Ein "Input" ist ein Signal oder eine Information, die in den Microcontroller eingegeben oder eingelesen wird. Typischerweise werden Inputs in Form von elektrischen Signalen oder Spannungen bereitgestellt. Diese können von verschiedenen Quellen stammen wie z.B. Sensoren, Tasten, Schaltern oder anderen Microcontrollern.
 
 
-### 2.1.1 Time of Flight (TOF) Distanz Sensor
+## 2.1 Time of Flight (TOF) Distanz Sensor
 
 - Pfad: `projects/inputs/input_TOF`
 
@@ -52,7 +52,7 @@ Die Pins sind von links nach rechts wie folgt belegt:
 * **3V3**
 * 5V
 
-#### 2.1.1.1 Eine gemessene Distanz am Monitor auslesen
+### 2.1.1 Eine gemessene Distanz am Monitor auslesen
 
 - Pfad: `projects/inputs/input_TOF/input_TOF_output_Serial`
   
@@ -62,14 +62,14 @@ Um den gemessenen Abstand zu sehen, müssen wir das Messergebnis des Sensors zun
 
 
 
-#### 2.1.1.2 Distanz abhängig eine LED ein- und ausschalten
+### 2.1.2 Distanz abhängig eine LED ein- und ausschalten
 
 - Pfad: `projects/inputs/input_TOF/input_TOF_output_LED`
 
 Wir können auch eine Reaktion auslösen, sobald die Distanz unter einen gewissen Wert (z.B. 2 cm) fällt. Wenn sich ein Objekt wie z.B. eine Hand nahe genug am Sensor befindet, leuchtet die LED.
 
 
-### 2.1.2 Kapazitiver Touch Sensor
+## 2.2 Kapazitiver Touch Sensor
 
 - Pfad: `projects/inputs/input_Touch`
 
@@ -77,7 +77,7 @@ Ein kapazitiver Touch-Sensor funktioniert auf der Basis von Körperkapazität un
 
 Der Sensor ähnelt im Anschluss und in der Ansteuerung durch Code einem Taster bzw. Button.
 
-#### 2.1.2.1 Sensor am Seriellen Plotter auslesen
+### 2.2.1 Sensor am Seriellen Plotter auslesen
 
 - Pfad: `projects/inputs/input_Touch/input_Touch_output_Plotter`
   
@@ -90,25 +90,26 @@ Um zu testen ob der Sensor eine Berührung wahrnimmt, können wir den Seriellen 
 
 
 
-#### 2.1.2.2 Berührungs-abhängig eine LED ein- und ausschalten
+### 2.2.2 Berührungs-abhängig eine LED ein- und ausschalten
 
 - Pfad: `projects/inputs/input_TOF/input_Touch_output_LED`
 
 Wir können auch eine Reaktion auslösen sobald der Sensor eine Berühung wahrnimmt. Wenn wir den Sensor berühren, leuchtet die LED.
 
 Dazu erweitern wir unseren Schaltkreis um eine LED und einen Widerstand:
+
 <img src="/images/TouchSensor_LED.png" width = 70%/>
 
 
 
-### 2.1.3 Weitere Inputs
+## 2.3 Weitere Inputs
 Natürlich stehen euch auch alle weiteren Inputs aus den Fundiono-Koffern der Schule zur Verfügung. Dazu zählen z.B. Temperatursensoren, Feuchtigkeitssensoren oder Tastenfelder. 
 
 
-## 2.2 Outputs
+# 3. Projekte – Outputs
 Ein "Output" ist ein Signal oder eine Information, die der Microcontroller generiert oder ausgibt. Es handelt sich um die Reaktion des Microcontrollers auf interne Berechnungen oder Benutzereingaben. Den Output legen wir duch den Code, mit dem wir den Microntroller programmieren, fest.
 
-### 2.2.1 LED / 2 LEDs
+## 3.1 LED / 2 LEDs
 - Pfad: `projects/outputs/simple_demo_leds_button`
 
 Ein Button und eine LED (bzw. später zwei LEDs) werden mit dem Arduino verbunden.
@@ -116,7 +117,7 @@ Wenn der Button gedrückt wird, geht die LED an (bzw. später die andere auch au
 
 <img src="/images/Button_and_2_LEDs.png" width = 100%/>
 
-### 2.2.2 LED Streifen "Neopixel"
+## 3.2 LED Streifen "Neopixel"
 - Pfad: `projects/outputs/simple_demo_neopixel_button`
 
 Ein Button und ein LED Streifen "Neopixel" werden mit dem Arduino verbunden.
@@ -134,7 +135,7 @@ In der Arduino IDE muss noch "Adafruit Neopixel" installiert werden.
 
 <img src="/images/Button_and_Neopixel.png" width = 100%/>
 
-### 2.2.3 Servo Motor
+## 3.3 Servo Motor
 - Pfad: `projects/outputs/simple_demo_servo_button`
 
 Ein Button und ein Servo Motor (sozusagen ein Motor, der in eine festgelegte Position gedreht werden kann und sich nicht einfach nur dreht, bis man den Strom abstellt) werden mit dem Arduino verbunden.
@@ -143,6 +144,6 @@ Wenn der Button gedrückt wird, dreht sich der Servo weiter.
 <img src="/images/Button_and_Servo.png" width = 100%/>
 
 
-### 2.2.4 Weitere Outputs
+## 2.4 Weitere Outputs
 Auch weitere Outputs finden sich in den Fundiono-Koffern der Schule. Dazu zählen z.B. Lautsprecher, ein Ampelmodul oder LCD-Modul. 
 

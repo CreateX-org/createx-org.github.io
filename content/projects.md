@@ -6,7 +6,7 @@ weight = 1
 
 
 # 1. Projektdateien
-Um nicht von Null beginnen zu müssen, haben wir bereits ein Dateien vorbereiten, die uns als Grundlage für die Projekte dienen werden. Darin finden sich für verschiedene Bauteile Beispiele mit Erklärungen.
+Um nicht von Null beginnen zu müssen, haben wir bereits einige Dateien vorbereitet, die uns als Grundlage für die Projekte dienen werden. Darin finden sich für verschiedene Bauteile Beispiele mit Erklärungen.
 - [Code auf github.com](https://github.com/CreateX-org/workshop), dort befinden sich die Dateien in verschiedenen Ordnern.
 - [Download als .zip Datei](https://github.com/CreateX-org/workshop/archive/refs/heads/main.zip), um die Dateien in die Arduino IDE zu laden und auf den Microcontroller zu übertragen.
 
@@ -81,11 +81,11 @@ Der Sensor ähnelt im Anschluss und in der Ansteuerung durch Code einem Taster b
 
 - Pfad: `projects/inputs/input_Touch/input_Touch_output_Plotter`
   
-<img src="/images/TouchSensor_Plotter.png" width = 80%/>
+<img src="/images/TouchSensor_Plotter.png" width = 70%/>
 
 Um zu testen ob der Sensor eine Berührung wahrnimmt, können wir den Seriellen Plotter der Arduino IDE nutzen. Wenn wir den Arduino dann mit einem Computer verbinden, können wir auf dem Seriellen Plotter der Arduino IDE das Ergebnis der Messung sehen. Wenn wir den Sensor berühren, sehen wir einen Ausschlag um 1, so wie wir es im Code festgelegt haben.
 
-<img src="/images/SeriellerPlotter.png" width = 80%/>
+<img src="/images/SeriellerPlotter.png" width = 100%/>
 
 
 
@@ -97,7 +97,7 @@ Um zu testen ob der Sensor eine Berührung wahrnimmt, können wir den Seriellen 
 Wir können auch eine Reaktion auslösen sobald der Sensor eine Berühung wahrnimmt. Wenn wir den Sensor berühren, leuchtet die LED.
 
 Dazu erweitern wir unseren Schaltkreis um eine LED und einen Widerstand:
-<img src="/images/TouchSensor_LED.png" width = 80%/>
+<img src="/images/TouchSensor_LED.png" width = 70%/>
 
 
 

@@ -220,8 +220,18 @@ Wenn der Button gedrückt wird, dreht sich der Servo weiter.
 
 <img src="/images/Button_and_Servo.png" width = 100%/>
 
+## 3.6 Wasserpumpe
+Hier sind ein Input (Feuchtigkeitssensor) und ein Output (Pumpe) kombiniert.
 
-## 3.5 Weitere Outputs
+- Pfad: `projects/outputs/input_humidity_output_pump`
+- Verbindung:
+    - Schwarz => GND
+    - Rot => 5V
+    - Gelb / IN => Digitaler Pin, z.B. Pin 2 im Beispiel. Dieser schaltet die Pumpe an (HIGH) und aus (LOW)
+    - Weiß / Out => Analoger Pin, z.B. Pin A0 im Beispiel. Dieser list den analogen (ADC) Wert aus, welcher bei ca. 350 liegen sollte, wenn der Sensor trocken ist.
+
+
+## 3.7 Weitere Outputs
 Auch weitere Outputs finden sich in den Fundiono-Koffern der Schule. Dazu zählen z.B. Lautsprecher, ein Ampelmodul oder LCD-Modul. 
 
 

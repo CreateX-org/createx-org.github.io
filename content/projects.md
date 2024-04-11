@@ -103,7 +103,7 @@ Dazu erweitern wir unseren Schaltkreis um eine LED und einen Widerstand:
 
 ## 2.3 Gestenerkennung
 - Pfad: `projects/inputs/input_gesture`
-- Weitere Infos: https://wiki.seeedstudio.com/Grove-Gesture_v1.0/#play-with-arduino
+- Weitere Infos: [https://wiki.seeedstudio.com/Grove-Gesture_v1.0/#play-with-arduino](https://wiki.seeedstudio.com/Grove-Gesture_v1.0/#play-with-arduino)
 - Die Verbindung mit dem Arduino erfolgt analog zum Time-of-Flight Sensor:
     - Schwarz / GND => GND
     - Rot / 5 V => 5 V
@@ -124,7 +124,7 @@ In der Arduino IDE muss noch "Gesture PAJ7620" installiert werden.
 
 ## 2.4 Neigungs- und Rotationssensor
 - Pfad: `projects/inputs/input_IMU`
-- Weitere Infos zur Bibliothek: https://github.com/LiquidCGS/FastIMU/
+- Weitere Infos zur Bibliothek: [https://github.com/LiquidCGS/FastIMU/](https://github.com/LiquidCGS/FastIMU/)
 - Die Verbindung mit dem Arduino erfolgt analog zum Time-of-Flight Sensor:
     - Schwarz / GND => GND
     - Rot / 5 V => 5 V
@@ -144,7 +144,7 @@ In der Arduino IDE muss noch "FastIMU" installiert werden.
 
 ## 2.5 Pulsoximeter / Herzschlag
 - Pfad: `projects/inputs/input_heartrate`
-- Weitere Infos zur Bibliothek: https://github.com/gabriel-milan/Arduino-MAX30100
+- Weitere Infos zur Bibliothek: [https://github.com/gabriel-milan/Arduino-MAX30100](https://github.com/gabriel-milan/Arduino-MAX30100)
 - Die Verbindung mit dem Arduino erfolgt analog zum Time-of-Flight Sensor:
     - Schwarz / GND => GND
     - Rot / 5 V => 5 V

@@ -101,8 +101,68 @@ Dazu erweitern wir unseren Schaltkreis um eine LED und einen Widerstand:
 <img src="/images/TouchSensor_LED.png" width = 70%/>
 
 
+## 2.3 Gestenerkennung
+- Pfad: `projects/inputs/input_gesture`
+- Weitere Infos: https://wiki.seeedstudio.com/Grove-Gesture_v1.0/#play-with-arduino
+- Die Verbindung mit dem Arduino erfolgt analog zum Time-of-Flight Sensor:
+    - Schwarz / GND => GND
+    - Rot / 5 V => 5 V
+    - Gelb / SDA => SDA
+    - Weiß / SCK => SCK
 
-## 2.3 Weitere Inputs
+Falls die Verbindung zum Sensor unterbricht, sollten Pull-Up Widerstände eingefügt werden. Das machen wir bei Bedarf am besten gemeinsam.
+
+**WICHTIG**:
+In der Arduino IDE muss noch "Gesture PAJ7620" installiert werden.
+
+1. Auf den "Library Manager" klicken (ganz links das Icon mit den Büchern)
+2. Nach "Gesture PAJ7620" oder "grove gesture" suchen
+3. Installieren
+
+<img src="/images/Arduino_install_gesture.png" width = 50%/>
+
+
+## 2.4 Neigungs- und Rotationssensor
+- Pfad: `projects/inputs/input_IMU`
+- Weitere Infos zur Bibliothek: https://github.com/LiquidCGS/FastIMU/
+- Die Verbindung mit dem Arduino erfolgt analog zum Time-of-Flight Sensor:
+    - Schwarz / GND => GND
+    - Rot / 5 V => 5 V
+    - Gelb / SDA => SDA
+    - Weiß / SCK => SCK
+
+Falls die Verbindung zum Sensor unterbricht, sollten Pull-Up Widerstände eingefügt werden. Das machen wir bei Bedarf am besten gemeinsam.
+
+**WICHTIG**:
+In der Arduino IDE muss noch "FastIMU" installiert werden.
+
+1. Auf den "Library Manager" klicken (ganz links das Icon mit den Büchern)
+2. Nach "FastIMU" oder "mpu6886" suchen
+3. Installieren
+
+<img src="/images/Arduino_install_mpu6886.png" width = 50%/>
+
+## 2.5 Pulsoximeter / Herzschlag
+- Pfad: `projects/inputs/input_heartrate`
+- Weitere Infos zur Bibliothek: https://github.com/gabriel-milan/Arduino-MAX30100
+- Die Verbindung mit dem Arduino erfolgt analog zum Time-of-Flight Sensor:
+    - Schwarz / GND => GND
+    - Rot / 5 V => 5 V
+    - Gelb / SDA => SDA
+    - Weiß / SCK => SCK
+
+Falls die Verbindung zum Sensor unterbricht, sollten Pull-Up Widerstände eingefügt werden. Das machen wir bei Bedarf am besten gemeinsam.
+
+**WICHTIG**:
+In der Arduino IDE muss noch "MAX30100_milan" installiert werden.
+
+1. Auf den "Library Manager" klicken (ganz links das Icon mit den Büchern)
+2. Nach "MAX30100_milan" oder "MAX30100 milan" suchen
+3. Installieren
+
+<img src="/images/Arduino_install_MAX30100.png" width = 50%/>
+
+## 2.4 Weitere Inputs
 Natürlich stehen euch auch alle weiteren Inputs aus den Fundiono-Koffern der Schule zur Verfügung. Dazu zählen z.B. Temperatursensoren, Feuchtigkeitssensoren oder Tastenfelder. 
 
 
@@ -135,7 +195,24 @@ In der Arduino IDE muss noch "Adafruit Neopixel" installiert werden.
 
 <img src="/images/Button_and_Neopixel.png" width = 100%/>
 
-## 3.3 Servo Motor
+
+## 3.3 LED Matrix "NeoHex"
+- Verbindung zum Arduino **NICHT** via I2C (also nicht alle 4 Kabel!), sondern wie folgt:
+    - Schwarz => GND
+    - Rot => 5V
+    - Gelb => Digitaler Pin am Adruino, z.B. im Beispiel Pin 2
+
+**Wichtig**In der Arduino IDE muss noch "fastled" installiert werden.
+
+1. Auf den "Library Manager" klicken (ganz links das Icon mit den Büchern)
+2. Nach "fastled" suchen
+3. Installieren
+
+<img src="/images/Arduino_install_fastled.png" width = 50%/>
+
+Dokumentation gibt es hier: https://fastled.io/docs/index.html
+
+## 3.4 Servo Motor
 - Pfad: `projects/outputs/simple_demo_servo_button`
 
 Ein Button und ein Servo Motor (sozusagen ein Motor, der in eine festgelegte Position gedreht werden kann und sich nicht einfach nur dreht, bis man den Strom abstellt) werden mit dem Arduino verbunden.
@@ -144,7 +221,7 @@ Wenn der Button gedrückt wird, dreht sich der Servo weiter.
 <img src="/images/Button_and_Servo.png" width = 100%/>
 
 
-## 2.4 Weitere Outputs
+## 3.5 Weitere Outputs
 Auch weitere Outputs finden sich in den Fundiono-Koffern der Schule. Dazu zählen z.B. Lautsprecher, ein Ampelmodul oder LCD-Modul. 
 
 

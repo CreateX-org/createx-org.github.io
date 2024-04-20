@@ -107,8 +107,8 @@ Dazu erweitern wir unseren Schaltkreis um eine LED und einen Widerstand:
 - Die Verbindung mit dem Arduino erfolgt analog zum Time-of-Flight Sensor:
     - Schwarz / GND => GND
     - Rot / 5 V => 5 V
-    - Gelb / SDA => SDA
-    - Weiß / SCK => SCK
+    - Gelb / SCL => SCL
+    - Weiß / SDA => SDA
 
 Falls die Verbindung zum Sensor unterbricht, sollten Pull-Up Widerstände eingefügt werden. Das machen wir bei Bedarf am besten gemeinsam.
 

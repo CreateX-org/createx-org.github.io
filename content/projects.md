@@ -172,7 +172,7 @@ In der Arduino IDE muss noch "MAX30100_milan" installiert werden.
 - Optional, Empfänger Board => Arduino:
   - 1 bis 4 Kabel von `Out1`, `Out1` etc. => Digital Pin, zB `2`, `3`, `4` und `5`
   
-<img src="https://raw.githubusercontent.com/CreateX-org/workshop/main/projects/inputs/input_infrared/infrared_led.gif" width = 50%/>
+<img src="https://raw.githubusercontent.com/CreateX-org/workshop/main/projects/inputs/input_infrared/infrared_led.gif" width = 30%/>
 
 Wenn auf der Fernbedienung eine der Kanalasten (CH 1-4) gedrückt wird, wechselt der entsprechende Ausgang (OUT 1-4) von LOW auf HIGH und die entsprechende LED (H 1-4) auf dem Empfängerboard (`blau`) leuchtet, solange wie die Kanaltaste auf der Fernbedienung gedrückt wird. Wenn die rote Power Taste auf der Fernbedienung gedrückt wird, wechseln alle Ausgänge auf dem Empfängerboard von LOW auf HIGH und es leuchten alle LEDs, solange wie die Taste auf der Fernbedienung gedrückt wird. 
 

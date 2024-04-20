@@ -193,7 +193,7 @@ Wenn auf der Fernbedienung eine der Kanalasten (CH 1-4) gedrückt wird, wechselt
   - Je mehr Licht auf eine Fotodiode trifft, desto schneller flackert das Signal (höhere Frequenz).
 - Erkennen von Farben
   - Um eine spezifische Farbe zu erkennen, nutzt der Sensor die PINs S2 und S3. Diese PINs steuern, welche der Farbfilter-Fotodioden aktiv sind.
-  - <img src="/images/farbsensor_dioden_typen.png" width = 50%/>
+  - <img src="/images/farbsensor_dioden_typen.png" width = 30%/>
 
 
 ## 2.8 Weitere Inputs

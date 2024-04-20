@@ -165,7 +165,7 @@ In der Arduino IDE muss noch "MAX30100_milan" installiert werden.
 ## 2.6 Infrarot Fernbedienung mit 4 Kanälen
 
 - Pfad `projects/inputs/input_infrared`
-- [Datenblatt](https://www.berrybase.de/Pixelpdfdata/Articlepdf/id/278/onumber/IRRM-4)
+- [Datenblatt](https://www.berrybase.de/Pixelpdfdata/Articlepdf/id/278/onumber/IRRM-4), Reichweite: 5 - 8 Meter
 - Immer nötig, Empfänger Board => Arduino:
   - GND => GND
   - VCC => 5 V

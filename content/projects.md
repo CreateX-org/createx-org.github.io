@@ -202,7 +202,7 @@ In der Arduino IDE muss noch "Adafruit Neopixel" installiert werden.
     - Rot => 5V
     - Gelb => Digitaler Pin am Adruino, z.B. im Beispiel Pin 2
 
-**Wichtig**In der Arduino IDE muss noch "fastled" installiert werden.
+**Wichtig** In der Arduino IDE muss noch "fastled" installiert werden.
 
 1. Auf den "Library Manager" klicken (ganz links das Icon mit den Büchern)
 2. Nach "fastled" suchen
@@ -210,7 +210,7 @@ In der Arduino IDE muss noch "Adafruit Neopixel" installiert werden.
 
 <img src="/images/Arduino_install_fastled.png" width = 50%/>
 
-Dokumentation gibt es hier: https://fastled.io/docs/index.html
+Dokumentation gibt es hier: [fastled](https://fastled.io/docs/index.html)
 
 ## 3.4 Servo Motor
 - Pfad: `projects/outputs/simple_demo_servo_button`

@@ -176,7 +176,27 @@ In der Arduino IDE muss noch "MAX30100_milan" installiert werden.
 
 Wenn auf der Fernbedienung eine der Kanalasten (CH 1-4) gedrückt wird, wechselt der entsprechende Ausgang (OUT 1-4) von LOW auf HIGH und die entsprechende LED (H 1-4) auf dem Empfängerboard (`blau`) leuchtet, solange wie die Kanaltaste auf der Fernbedienung gedrückt wird. Wenn die rote Power Taste auf der Fernbedienung gedrückt wird, wechseln alle Ausgänge auf dem Empfängerboard von LOW auf HIGH und es leuchten alle LEDs, solange wie die Taste auf der Fernbedienung gedrückt wird. 
 
-## 2.7 Weitere Inputs
+## 2.7 Farbsensor
+- Pfad `projects/inputs/input_farbsensor`
+- [Ausführliche Anleitung und Beschreibung](https://elektro.turanis.de/html/prj029/index.html)
+
+### Verschaltung
+
+<img src="/images/farbsensor_serial.png" width = 50%/>
+
+### Funktionsweise
+- Fotodioden und Farbfilter
+  - der Sensor ist eigentlich eine kleine Matrix, bzw. ein Netz aus [Fotodioden](https://de.wikipedia.org/wiki/Photodiode), welche Licht aufnehmen, ähnlich wie die Pixel in einer Digitalkamera. 
+  - Es gibt Fotodioden mit Farbfilter (Rot, Grün und Blau), die spezielle Farbanteile aus dem Licht herauszufiltern und Fotodioden ohne Filter, die das gesamte Licht messen.
+- Licht in Signale umwandeln
+  - Das Licht wird durch den sogennaten "Strom-Frequenz-Wandler" in elektrische Signale umgewandelt. Es wird gemessen, wie viel Licht ankommt, dies wird als Frequenz ausgegeben.
+  - Je mehr Licht auf eine Fotodiode trifft, desto schneller flackert das Signal (höhere Frequenz).
+- Erkennen von Farben
+  - Um eine spezifische Farbe zu erkennen, nutzt der Sensor die PINs S2 und S3. Diese PINs steuern, welche der Farbfilter-Fotodioden aktiv sind.
+  - <img src="/images/farbsensor_dioden_typen.png" width = 50%/>
+
+
+## 2.8 Weitere Inputs
 Natürlich stehen euch auch alle weiteren Inputs aus den Fundiono-Koffern der Schule zur Verfügung. Dazu zählen z.B. Temperatursensoren, Feuchtigkeitssensoren oder Tastenfelder. 
 
 

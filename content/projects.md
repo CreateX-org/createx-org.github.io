@@ -162,7 +162,21 @@ In der Arduino IDE muss noch "MAX30100_milan" installiert werden.
 
 <img src="/images/Arduino_install_MAX30100.png" width = 50%/>
 
-## 2.4 Weitere Inputs
+## 2.6 Infrarot Fernbedienung mit 4 Kanälen
+
+- Pfad `projects/inputs/input_infrared`
+- [Datenblatt](https://www.berrybase.de/Pixelpdfdata/Articlepdf/id/278/onumber/IRRM-4)
+- Immer nötig, Empfänger Board => Arduino:
+  - GND => GND
+  - VCC => 5 V
+- Optional, Empfänger Board => Arduino:
+  - 1 bis 4 Kabel von Out1, etc. => Digitalem Pin, zB 2,3,4 und 5
+  
+<img src="https://github.com/CreateX-org/workshop/blob/124c09424d44a97ce22ee0cdb129fef7a26a0647/projects/inputs/input_infrared/infrared_led.gif" width = 50%/>
+
+Wenn auf der Fernbedienung eine der Kanalasten (CH 1-4) gedrückt wird, wechselt der entsprechende Ausgang (OUT 1-4) von LOW auf HIGH und die entsprechende LED (H 1-4) auf dem Empfängerboard leuchtet, solange wie die Kanaltaste auf der Fernbedienung gedrückt wird. Wenn die rote Power Taste auf der Fernbedienung gedrückt wird, wechseln alle Ausgänge auf dem Empfängerboard von LOW auf HIGH und es leuchten alle LEDs, solange wie die Taste auf der Fernbedienung gedrückt wird. 
+
+## 2.7 Weitere Inputs
 Natürlich stehen euch auch alle weiteren Inputs aus den Fundiono-Koffern der Schule zur Verfügung. Dazu zählen z.B. Temperatursensoren, Feuchtigkeitssensoren oder Tastenfelder. 
 
 

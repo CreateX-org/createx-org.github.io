@@ -270,11 +270,9 @@ Hier sind ein Input (Feuchtigkeitssensor) und ein Output (Pumpe) kombiniert.
     - Digitale Signale stellen Informationen in einer binären Form dar. Diese Darstellung erfolgt durch diskrete Werte, die nur bestimmte, festgelegte Zustände annehmen können. Ein digitales Signal hat also eine begrenzte Auflösung.
     - Die Umwandlung von analog zu digital (wie durch einen ADC) ermöglicht es, dass analoge Signale von digitalen Systemen, wie Computern und Mikrocontrollern verarbeitet, gespeichert und übertragen werden können.
   - `analogRead(INPUT_PIN)` misst die Spannung am Pin und wandelt sie in eine digitale Zahl um, die bei Arduino zwischen 0 und 1023 liegen kann
-  - dieser Wert kann dann verwendet werden um die angeschlossene Wasserpumpe (PUMP_PIN) zu aktivieren, muss aber eventuell [geglättet](https://docs.arduino.cc/built-in-examples/analog/Smoothing/) werden um nützlich zu sein <img src="/images/wasserpumpe_glättung.png" width = 20%/>
+  - dieser Wert kann dann verwendet werden um die angeschlossene Wasserpumpe (PUMP_PIN) zu aktivieren, muss aber eventuell [geglättet](https://docs.arduino.cc/built-in-examples/analog/Smoothing/) werden um nützlich zu sein
+  - <img src="/images/wasserpumpe_glättung.png" width = 40%/>
 
-
-
-[^1]: Achtung, die Farben beziehen sich auf die **Kabelfarben**! <img src="/images/wasserpumpe_kabel.png" width = 20%/>
 
 
 ## 3.7 Weitere Outputs
@@ -284,3 +282,7 @@ Auch weitere Outputs finden sich in den Fundiono-Koffern der Schule. Dazu zähle
 # Arduino UNO Pinbelegung
 Quelle: [https://docs.arduino.cc/hardware/uno-rev3](https://docs.arduino.cc/hardware/uno-rev3)
 <img src="https://docs.arduino.cc/static/2b141eb1cfe6f465a949c203e4af1b5f/A000066-pinout.png" width=100%>
+
+
+[^1]: Achtung, die Farben beziehen sich auf die **Kabelfarben**!
+<img src="/images/wasserpumpe_kabel.png" width = 20%/>

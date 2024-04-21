@@ -241,7 +241,9 @@ In der Arduino IDE muss noch "Adafruit Neopixel" installiert werden.
 - Verbindung zum Arduino **NICHT** via I2C (also nicht alle 4 Kabel!), sondern wie folgt:
     - Schwarz => GND
     - Rot => 5V
-    - Gelb => Digitaler Pin am Adruino, z.B. im Beispiel Pin 2
+    - Weiß => Digitaler Pin am Adruino, z.B. im Beispiel Pin 2
+
+Achtung, die Farben beziehen sich auf die **Kabelfarben**! [^1]
 
 **Wichtig** In der Arduino IDE muss noch "fastled" installiert werden.
 
@@ -296,10 +298,11 @@ Quelle: [https://docs.arduino.cc/hardware/uno-rev3](https://docs.arduino.cc/hard
 
 ----------------
 
+# Fußnoten
+
 Sensor Farbcodierung vs. Kabel |  Zwei Kabeltypen
 :-------------------------:|:-------------------------:
-<img src="/images/wasserpumpe_kabel.png" width = 20%/>  | <img src="/images/kabel.png" width = 40%/>
-
+<img src="/images/wasserpumpe_kabel.png" width = 40%/>  | <img src="/images/kabel.png" width = 60%/>
 
 
 [^1]: Die Kabelfarben Gelb und Weiß, der Kabel die sich mit dem Arduino verbinden lassen, sind im Vergleich zum Sensor-Anschluss vertauscht (Siehe Fotos).

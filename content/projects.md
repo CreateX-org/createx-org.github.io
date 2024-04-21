@@ -110,6 +110,8 @@ Dazu erweitern wir unseren Schaltkreis um eine LED und einen Widerstand:
     - Gelb / SCL => SCL
     - Weiß / SDA => SDA
 
+Achtung, die Farben beziehen sich auf die **Kabelfarben**! [^1]
+
 Falls die Verbindung zum Sensor unterbricht, sollten Pull-Up Widerstände eingefügt werden. Das machen wir bei Bedarf am besten gemeinsam.
 
 **WICHTIG**:
@@ -126,10 +128,12 @@ In der Arduino IDE muss noch "Gesture PAJ7620" installiert werden.
 - Pfad: `projects/inputs/input_IMU`
 - Weitere Infos zur Bibliothek: [https://github.com/LiquidCGS/FastIMU/](https://github.com/LiquidCGS/FastIMU/)
 - Die Verbindung mit dem Arduino erfolgt analog zum Time-of-Flight Sensor:
-    - Schwarz / GND => GND
-    - Rot / 5 V => 5 V
-    - Gelb / SDA => SDA
-    - Weiß / SCK => SCK
+    - Schwarz/ GND => GND
+    - Rot/ 5 V => 5 V
+    - Gelb/ SCL => SCL
+    - Weiß/ SDA => SDA
+
+Achtung, die Farben beziehen sich auf die **Kabelfarben**! [^1] 
 
 Falls die Verbindung zum Sensor unterbricht, sollten Pull-Up Widerstände eingefügt werden. Das machen wir bei Bedarf am besten gemeinsam.
 
@@ -146,10 +150,13 @@ In der Arduino IDE muss noch "FastIMU" installiert werden.
 - Pfad: `projects/inputs/input_heartrate`
 - Weitere Infos zur Bibliothek: [https://github.com/gabriel-milan/Arduino-MAX30100](https://github.com/gabriel-milan/Arduino-MAX30100)
 - Die Verbindung mit dem Arduino erfolgt analog zum Time-of-Flight Sensor:
-    - Schwarz / GND => GND
-    - Rot / 5 V => 5 V
-    - Gelb / SDA => SDA
-    - Weiß / SCK => SCK
+    - Schwarz/ GND => GND
+    - Rot/ 5 V => 5 V
+    - Gelb/ SCL => SCL
+    - Weiß/ SDA => SDA
+
+Achtung, die Farben beziehen sich auf die **Kabelfarben**! [^1] 
+
 
 Falls die Verbindung zum Sensor unterbricht, sollten Pull-Up Widerstände eingefügt werden. Das machen wir bei Bedarf am besten gemeinsam.
 
@@ -287,6 +294,9 @@ Quelle: [https://docs.arduino.cc/hardware/uno-rev3](https://docs.arduino.cc/hard
 <img src="https://docs.arduino.cc/static/2b141eb1cfe6f465a949c203e4af1b5f/A000066-pinout.png" width=100%>
 
 
-[^1]: Die Kabelfarben Gelb und Weiß sind im Vergleich zum Sensor-Anschluss vertauscht (Siehe Foto).
+----------------
+<img src="/images/wasserpumpe_kabel.png" width = 20%/>
+<img src="/images/kabel.png" width = 20%/>
 
-<img src="/images/wasserpumpe_kabel.png" width = 1%/>
+
+[^1]: Die Kabelfarben Gelb und Weiß, der Kabel die sich mit dem Arduino verbinden lassen, sind im Vergleich zum Sensor-Anschluss vertauscht (Siehe Fotos).

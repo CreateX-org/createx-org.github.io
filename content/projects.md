@@ -258,13 +258,16 @@ Wenn der Button gedrückt wird, dreht sich der Servo weiter.
 Hier sind ein Input (Feuchtigkeitssensor) und ein Output (Pumpe) kombiniert.
 
 - Pfad: `projects/outputs/input_humidity_output_pump`
-- Verbindung:
-    - Schwarz => GND
-    - Rot => 5V
-    - Weiß [^1]/ IN => Digitaler Pin, z.B. Pin 2 im Beispiel. Dieser schaltet die Pumpe an (HIGH) und aus (LOW)
-    - Gelb / Out => Analoger Pin, z.B. Pin A0 im Beispiel. Dieser list den analogen (ADC) Wert aus, welcher bei ca. 350 liegen sollte, wenn der Sensor trocken ist.
 
-- Funktionsweise:
+### Verbindung
+  - Schwarz => GND
+  - Rot => 5V
+  - Weiß/ IN => Digitaler Pin, z.B. Pin 2 im Beispiel. Dieser schaltet die Pumpe an (HIGH) und aus (LOW)
+  - Gelb/ Out => Analoger Pin, z.B. Pin A0 im Beispiel. Dieser list den analogen (ADC) Wert aus, welcher bei ca. 350 liegen sollte, wenn der Sensor trocken ist.
+  
+Achtung, die Farben beziehen sich auf die **Kabelfarben**! [^1]
+
+### Funktionsweise
   - Der Input des Feuchtigkeitssensors, wird vom Analog-to-Digital Converter ([ADC](https://de.wikipedia.org/wiki/Analog-Digital-Umsetzer)) ausgelesen, der das analoge Signale in digitale Werte umwandelt.
     - Analoge Signale repräsentieren Informationen kontinuierlich, d.h. Signale mit einer potenziell unendlichen Skala von Werten. Diese spiegeln oft natürliche, physikalische oder elektrische Zustände direkt wider, wie zum Beispiel die Spannung.
     - Digitale Signale stellen Informationen in einer binären Form dar. Diese Darstellung erfolgt durch diskrete Werte, die nur bestimmte, festgelegte Zustände annehmen können. Ein digitales Signal hat also eine begrenzte Auflösung.
@@ -284,5 +287,6 @@ Quelle: [https://docs.arduino.cc/hardware/uno-rev3](https://docs.arduino.cc/hard
 <img src="https://docs.arduino.cc/static/2b141eb1cfe6f465a949c203e4af1b5f/A000066-pinout.png" width=100%>
 
 
-[^1]: Achtung, die Farben beziehen sich auf die **Kabelfarben**!
-<img src="/images/wasserpumpe_kabel.png" width = 20%/>
+[^1]: Die Kabelfarben Gelb und Weiß sind im Vergleich zum Sensor-Anschluss vertauscht (Siehe Foto).
+
+<img src="/images/wasserpumpe_kabel.png" width = 1%/>

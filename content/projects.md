@@ -261,8 +261,8 @@ Hier sind ein Input (Feuchtigkeitssensor) und ein Output (Pumpe) kombiniert.
 - Verbindung:
     - Schwarz => GND
     - Rot => 5V
-    - Gelb / IN => Digitaler Pin, z.B. Pin 2 im Beispiel. Dieser schaltet die Pumpe an (HIGH) und aus (LOW)
-    - Weiß / Out => Analoger Pin, z.B. Pin A0 im Beispiel. Dieser list den analogen (ADC) Wert aus, welcher bei ca. 350 liegen sollte, wenn der Sensor trocken ist.
+    - Weiß [^1]/ IN => Digitaler Pin, z.B. Pin 2 im Beispiel. Dieser schaltet die Pumpe an (HIGH) und aus (LOW)
+    - Gelb / Out => Analoger Pin, z.B. Pin A0 im Beispiel. Dieser list den analogen (ADC) Wert aus, welcher bei ca. 350 liegen sollte, wenn der Sensor trocken ist.
 
 - Funktionsweise:
   - Der Input des Feuchtigkeitssensors, wird vom Analog-to-Digital Converter ([ADC](https://de.wikipedia.org/wiki/Analog-Digital-Umsetzer)) ausgelesen, der das analoge Signale in digitale Werte umwandelt.
@@ -270,7 +270,14 @@ Hier sind ein Input (Feuchtigkeitssensor) und ein Output (Pumpe) kombiniert.
     - Digitale Signale stellen Informationen in einer binären Form dar. Diese Darstellung erfolgt durch diskrete Werte, die nur bestimmte, festgelegte Zustände annehmen können. Ein digitales Signal hat also eine begrenzte Auflösung.
     - Die Umwandlung von analog zu digital (wie durch einen ADC) ermöglicht es, dass analoge Signale von digitalen Systemen, wie Computern und Mikrocontrollern verarbeitet, gespeichert und übertragen werden können.
   - `analogRead(INPUT_PIN)` misst die Spannung am Pin und wandelt sie in eine digitale Zahl um, die bei Arduino zwischen 0 und 1023 liegen kann
-  - dieser Wert kann dann verwendet werden um die angeschlossene Wasserpumpe (PUMP_PIN) zu aktivieren
+  - dieser Wert kann dann verwendet werden um die angeschlossene Wasserpumpe (PUMP_PIN) zu aktivieren, muss aber eventuell [geglättet](https://docs.arduino.cc/built-in-examples/analog/Smoothing/) werden
+
+
+<img src="/images/wasserpumpe_glättung.png" width = 100%/>
+
+
+
+[^1]: Achtung, die Farben beziehen sich auf die **Kabelfarben**! <img src="/images/wasserpumpe_kabel.png" width = 100%/>
 
 
 ## 3.7 Weitere Outputs

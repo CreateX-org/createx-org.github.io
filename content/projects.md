@@ -295,8 +295,11 @@ Quelle: [https://docs.arduino.cc/hardware/uno-rev3](https://docs.arduino.cc/hard
 
 
 ----------------
-<img src="/images/wasserpumpe_kabel.png" width = 20%/>
-<img src="/images/kabel.png" width = 20%/>
+
+Sensor Farbcodierung vs. Kabel |  Zwei Kabeltypen
+:-------------------------:|:-------------------------:
+<img src="/images/wasserpumpe_kabel.png" width = 20%/>  | <img src="/images/kabel.png" width = 40%/>
+
 
 
 [^1]: Die Kabelfarben Gelb und Weiß, der Kabel die sich mit dem Arduino verbinden lassen, sind im Vergleich zum Sensor-Anschluss vertauscht (Siehe Fotos).

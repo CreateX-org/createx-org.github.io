@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Code | CreateX Workshop. </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <link rel="icon" type="image/png" href="/favicon.ico">
+    
+    
+    <link href="https://fonts.googleapis.com/css?family=Alfa+Slab+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Fira+Sans:400,500,600&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://createx-org.github.io/normalize.css">
+    <link rel="stylesheet" href="https://createx-org.github.io/style.css">
+    <script defer src="https://createx-org.github.io/scripts.js"></script>
+    
+    
+</head>
+
+<body>
+    
+<header class="box-shadow">
+    
+
+<a href="https://createx-org.github.io/">
+    <div class="logo">
+        <img src="https://createx-org.github.io/logo.png" alt="logo">
+        CreateX
+    </div>
+</a>
+
+<nav>
+    
+    
+    
+    <a class="nav-item subtitle-text" href="https://createx-org.github.io/projects/">Projekte</a>
+    
+    
+    
+    
+    <a class="nav-item subtitle-text" href="https://createx-org.github.io/code/">Code</a>
+    
+    
+    
+</nav>
+
+</header>
+
+
+    <main>
+        
+        
+        
+        
+        
+        <div class="toc">
+            <div class="toc-sticky">
+                
+                <div class="toc-item">
+                    <a class="subtext" href="https://createx-org.github.io/code/#1-grundlagen">1 Grundlagen</a>
+                </div>
+                
+                
+                <div class="toc-item-child">
+                    <a class="subtext" href="https://createx-org.github.io/code/#variablen"><small>- Variablen</small></a>
+                </div>
+                
+                <div class="toc-item-child">
+                    <a class="subtext" href="https://createx-org.github.io/code/#bedingungen-if-else"><small>- Bedingungen (if, else)</small></a>
+                </div>
+                
+                <div class="toc-item-child">
+                    <a class="subtext" href="https://createx-org.github.io/code/#schleifen"><small>- Schleifen</small></a>
+                </div>
+                
+                <div class="toc-item-child">
+                    <a class="subtext" href="https://createx-org.github.io/code/#arrays-sammlung-bzw-liste"><small>- Arrays (Sammlung bzw. Liste)</small></a>
+                </div>
+                
+                
+                
+                <div class="toc-item">
+                    <a class="subtext" href="https://createx-org.github.io/code/#2-arduino-spezifische-funktionen">2 Arduino-spezifische Funktionen</a>
+                </div>
+                
+                
+                <div class="toc-item-child">
+                    <a class="subtext" href="https://createx-org.github.io/code/#2-1-digitale-pins"><small>- 2.1 Digitale Pins</small></a>
+                </div>
+                
+                <div class="toc-item-child">
+                    <a class="subtext" href="https://createx-org.github.io/code/#2-2-analoge-pins"><small>- 2.2 Analoge Pins</small></a>
+                </div>
+                
+                <div class="toc-item-child">
+                    <a class="subtext" href="https://createx-org.github.io/code/#2-3-sonstige-funktionen"><small>- 2.3 Sonstige Funktionen</small></a>
+                </div>
+                
+                
+                
+                <div class="toc-item">
+                    <a class="subtext" href="https://createx-org.github.io/code/#3-nutzliche-funktionen-und-methoden">3 Nützliche Funktionen und Methoden</a>
+                </div>
+                
+                
+                <div class="toc-item-child">
+                    <a class="subtext" href="https://createx-org.github.io/code/#3-1-mathematische-funktionen"><small>- 3.1 Mathematische Funktionen</small></a>
+                </div>
+                
+                <div class="toc-item-child">
+                    <a class="subtext" href="https://createx-org.github.io/code/#3-2-tricks-zum-umgang-mit-sensoren-werten"><small>- 3.2 Tricks zum Umgang mit Sensoren-Werten</small></a>
+                </div>
+                
+                
+                
+            </div>
+        </div>
+        
+        
+
+        <div class="content text">
+            
+<div class="heading-text">Codebeispiele</div>
+<h1 id="1-grundlagen">1 Grundlagen</h1>
+<p>C++ ist eine effiziente und vielseitige Programmiersprache. Die wichtigsten Grundlagen sind: Variablen, Schleifen und Bedingungen.
+Mit diesen Elementen können wir bereits einfache Programme schreiben und Bauteile mit einer Logik verbinden.</p>
+<h2 id="variablen">Variablen</h2>
+<p>Eine Variable ist ein Speicherort, der einen Wert enthält. In C++ muss man den Typ einer Variable angeben.</p>
+<pre data-lang="cpp" style="background-color:#ffffff;color:#010101;" class="language-cpp "><code class="language-cpp" data-lang="cpp"><span style="color:#877611;">int</span><span> myVar; </span><span style="color:#898989;">// Deklaration einer Ganzzahl (int) Variable namens myVar
+</span><span>myVar </span><span style="color:#016692;">= </span><span style="color:#8c008a;">10</span><span>; </span><span style="color:#898989;">// wir weisen der Variable Namens myVar den Wert 10 zu
+</span><span>
+</span><span style="color:#877611;">double</span><span> myDouble </span><span style="color:#016692;">= </span><span style="color:#8c008a;">3.14</span><span>; </span><span style="color:#898989;">// wir können auch Gleitkommazahlen (double) speichern
+</span><span>
+</span><span style="color:#898989;">// Booleans speichern Wahrheitswerte (true oder false)
+</span><span style="color:#877611;">bool</span><span> istWahr </span><span style="color:#016692;">= </span><span style="color:#333366;">true</span><span>;
+</span><span style="color:#877611;">bool</span><span> istFalsch </span><span style="color:#016692;">= </span><span style="color:#333366;">false</span><span>;
+</span><span>
+</span><span>std::string myString </span><span style="color:#016692;">= </span><span style="color:#009f78;">&quot;Hallo Welt&quot;</span><span>; </span><span style="color:#898989;">// Eine Zeichenkette (string)
+</span></code></pre>
+<h2 id="bedingungen-if-else">Bedingungen (if, else)</h2>
+<p>Bedingte Anweisungen in C++ verwenden die <code>if</code> (wenn) und <code>else</code> (sonst) Schlüsselwörter. Bedingte Anweisungen können wir nutzen, um zu entscheiden, ob ein Codeblock ausgeführt werden soll oder nicht.</p>
+<pre data-lang="cpp" style="background-color:#ffffff;color:#010101;" class="language-cpp "><code class="language-cpp" data-lang="cpp"><span style="color:#877611;">int</span><span> x </span><span style="color:#016692;">= </span><span style="color:#8c008a;">10</span><span>;
+</span><span style="color:#016692;">if </span><span>(x </span><span style="color:#016692;">&gt; </span><span style="color:#8c008a;">5</span><span>) {
+</span><span>    </span><span style="color:#898989;">// Wenn x größer als 5 ist, dann ...
+</span><span>    Serial.</span><span style="color:#696989;">println</span><span>(</span><span style="color:#009f78;">&quot;x ist größer als 5&quot;</span><span>); </span><span style="color:#898989;">// schreiben wir diesen Text in den Seriellen Monitor
+</span><span>} </span><span style="color:#016692;">else </span><span>{
+</span><span>    </span><span style="color:#898989;">// Wenn x nicht größer als 5 ist, dann ...
+</span><span>    Serial.</span><span style="color:#696989;">println</span><span>(</span><span style="color:#009f78;">&quot;x ist nicht größer als 5&quot;</span><span>);
+</span><span>}
+</span></code></pre>
+<p>Für mehrere Bedingungen können wir <code>else if</code> verwenden.</p>
+<pre data-lang="cpp" style="background-color:#ffffff;color:#010101;" class="language-cpp "><code class="language-cpp" data-lang="cpp"><span style="color:#877611;">int</span><span> y </span><span style="color:#016692;">= </span><span style="color:#8c008a;">20</span><span>;
+</span><span style="color:#016692;">if </span><span>(y </span><span style="color:#016692;">&gt; </span><span style="color:#8c008a;">50</span><span>) {
+</span><span>    </span><span style="color:#898989;">// Wenn y größer als 50 ist, dann ...
+</span><span>    Serial.</span><span style="color:#696989;">println</span><span>(</span><span style="color:#009f78;">&quot;y ist größer als 50&quot;</span><span>);
+</span><span>} </span><span style="color:#016692;">else if </span><span>(y </span><span style="color:#016692;">&gt; </span><span style="color:#8c008a;">30</span><span>) {
+</span><span>    </span><span style="color:#898989;">// Wenn y nicht größer als 50 ist, aber wenn y größer als 30 ist, dann ...
+</span><span>    Serial.</span><span style="color:#696989;">println</span><span>(</span><span style="color:#009f78;">&quot;y ist größer als 30, aber nicht größer als 50&quot;</span><span>);
+</span><span>} </span><span style="color:#016692;">else </span><span>{
+</span><span>    </span><span style="color:#898989;">// Wenn y nicht größer als 50 ist und nicht größer als 30 ist, dann ...
+</span><span>    Serial.</span><span style="color:#696989;">println</span><span>(</span><span style="color:#009f78;">&quot;y ist nicht größer als 30&quot;</span><span>);
+</span><span>}
+</span></code></pre>
+<h2 id="schleifen">Schleifen</h2>
+<p>Es gibt verschiedene Arten von Schleifen in C++, aber die gebräuchlichsten sind <code>for</code> und <code>while</code>. Mit Schleifen können wir Code mehrmals ausführen.</p>
+<ol>
+<li>Die <code>for</code> Schleife:</li>
+</ol>
+<pre data-lang="cpp" style="background-color:#ffffff;color:#010101;" class="language-cpp "><code class="language-cpp" data-lang="cpp"><span style="color:#898989;">// i ist eine Variable, die wir in der Schleife verwenden
+</span><span style="color:#898989;">// wir beginnen mit i=0,
+</span><span style="color:#898989;">// die Schleife wird ausgeführt, solange i kleiner als 10 ist, 
+</span><span style="color:#898989;">// i wird nach jedem Durchlauf um 1 erhöht
+</span><span style="color:#016692;">for</span><span>(</span><span style="color:#877611;">int</span><span> i </span><span style="color:#016692;">= </span><span style="color:#8c008a;">0</span><span>; i </span><span style="color:#016692;">&lt; </span><span style="color:#8c008a;">10</span><span>; i</span><span style="color:#016692;">++</span><span>) { 
+</span><span>    </span><span style="color:#898989;">// In der Schleife stehen uns dann die Zahlen von 0 bis 9 zur Verfügung
+</span><span>    Serial.</span><span style="color:#696989;">println</span><span>(i);
+</span><span>}
+</span></code></pre>
+<ol start="2">
+<li>Die <code>while</code> Schleife:</li>
+</ol>
+<pre data-lang="cpp" style="background-color:#ffffff;color:#010101;" class="language-cpp "><code class="language-cpp" data-lang="cpp"><span style="color:#877611;">int</span><span> j </span><span style="color:#016692;">= </span><span style="color:#8c008a;">0</span><span>;
+</span><span style="color:#898989;">// solange j kleiner als 10 ist, wird der Code in der Schleife ausgeführt
+</span><span style="color:#016692;">while</span><span>(j </span><span style="color:#016692;">&lt; </span><span style="color:#8c008a;">10</span><span>) {
+</span><span>    Serial.</span><span style="color:#696989;">println</span><span>(i);
+</span><span>    j</span><span style="color:#016692;">++</span><span>; </span><span style="color:#898989;">// damit die Schleife nicht ewig läuft, erhöhen wir j nach jedem Durchlauf um 1 
+</span><span>}
+</span></code></pre>
+<h2 id="arrays-sammlung-bzw-liste">Arrays (Sammlung bzw. Liste)</h2>
+<p>Ein Array ist eine Sammlung von Elementen, die denselben Datentyp haben. Also z.B. eine Liste von Zahlen oder eine Liste von Zeichenketten.
+Die Größe eines Arrays ist bei der Erstellung festgelegt und kann später nicht geändert werden.</p>
+<pre data-lang="cpp" style="background-color:#ffffff;color:#010101;" class="language-cpp "><code class="language-cpp" data-lang="cpp"><span style="color:#877611;">int</span><span> myArray[</span><span style="color:#8c008a;">5</span><span>]; </span><span style="color:#898989;">//ein Array von Integern mit einer Länge von 5
+</span></code></pre>
+<p>Wir können dem Array auch direkt Werte zuweisen:</p>
+<pre data-lang="cpp" style="background-color:#ffffff;color:#010101;" class="language-cpp "><code class="language-cpp" data-lang="cpp"><span style="color:#877611;">int</span><span> myArray[</span><span style="color:#8c008a;">5</span><span>] </span><span style="color:#016692;">= </span><span>{</span><span style="color:#8c008a;">1</span><span>, </span><span style="color:#8c008a;">2</span><span>, </span><span style="color:#8c008a;">3</span><span>, </span><span style="color:#8c008a;">4</span><span>, </span><span style="color:#8c008a;">5</span><span>}; </span><span style="color:#898989;">// ein Array in dem wir 5 Elemente speichern
+</span></code></pre>
+<p>Wenn wir auf die einzelnen Elemente eines Arrays zugreifen, dann tun wir dies, indem wir den Index des Elements in eckigen Klammernangeben.
+Der Index beschreibt also die Stelle des Elements in der Liste.
+Wichtig ist, dass der Index bei 0 und nicht bei 1 beginnt. Dies ist bei den meisten Programmiersprachen der Fall. 
+Das erste Element hat also den Index 0, das zweite Element den Index 1, usw.</p>
+<pre data-lang="cpp" style="background-color:#ffffff;color:#010101;" class="language-cpp "><code class="language-cpp" data-lang="cpp"><span style="color:#898989;">// Gibt das erste Element des Arrays aus 
+</span><span>Serial.</span><span style="color:#696989;">println</span><span>(myArray[</span><span style="color:#8c008a;">0</span><span>]); </span><span style="color:#898989;">// --&gt; 1
+</span><span style="color:#898989;">// Ändert das zweite Element des Arrays zu 10
+</span><span>myArray[</span><span style="color:#8c008a;">1</span><span>] </span><span style="color:#016692;">= </span><span style="color:#8c008a;">10</span><span>; </span><span style="color:#898989;">// {1, 2, 3, 4, 5} --&gt; {1, 10, 3, 4, 5}
+</span></code></pre>
+<h1 id="2-arduino-spezifische-funktionen">2 Arduino-spezifische Funktionen</h1>
+<p>Die Arduino-Programmiersprache basiert auf C/C++ und bietet eine Reihe von spezifischen Funktionen, die auf die Hardware-Interaktion zugeschnitten sind. Hier sind einige der wichtigsten Arduino-spezifischen Funktionen:</p>
+<h2 id="2-1-digitale-pins">2.1 Digitale Pins</h2>
+<ol>
+<li>
+<p><code>pinMode(pin, mode)</code>: Diese Funktion konfiguriert den angegebenen Pin als Eingabe (<code>INPUT</code>) oder Ausgabe (<code>OUTPUT</code>).</p>
+<pre data-lang="cpp" style="background-color:#ffffff;color:#010101;" class="language-cpp "><code class="language-cpp" data-lang="cpp"><span style="color:#696989;">pinMode</span><span>(</span><span style="color:#8c008a;">13</span><span>, OUTPUT);  </span><span style="color:#898989;">// Setzt den digitalen Pin 13 als Ausgabe
+</span></code></pre>
+</li>
+<li>
+<p><code>digitalWrite(pin, value)</code>: Schreibt einen HIGH oder einen LOW Wert an einen digitalen Pin.</p>
+<pre data-lang="cpp" style="background-color:#ffffff;color:#010101;" class="language-cpp "><code class="language-cpp" data-lang="cpp"><span style="color:#696989;">digitalWrite</span><span>(</span><span style="color:#8c008a;">13</span><span>, HIGH);  </span><span style="color:#898989;">// Setzt den digitalen Pin 13 auf HIGH
+</span></code></pre>
+</li>
+<li>
+<p><code>digitalRead(pin)</code>: Liest den Wert von einem bestimmten digitalen Pin, HIGH oder LOW.</p>
+<pre data-lang="cpp" style="background-color:#ffffff;color:#010101;" class="language-cpp "><code class="language-cpp" data-lang="cpp"><span style="color:#877611;">int</span><span> buttonState </span><span style="color:#016692;">= </span><span style="color:#696989;">digitalRead</span><span>(</span><span style="color:#8c008a;">12</span><span>);  </span><span style="color:#898989;">// Liest den Wert vom digitalen Pin 12
+</span></code></pre>
+</li>
+</ol>
+<h2 id="2-2-analoge-pins">2.2 Analoge Pins</h2>
+<ol start="4">
+<li>
+<p><code>analogRead(pin)</code>: Liest den Wert von einem bestimmten analogen Pin. Gibt einen Wert zwischen 0 (bei 0V) und 1023 (bei 5V) zurück.</p>
+<pre data-lang="cpp" style="background-color:#ffffff;color:#010101;" class="language-cpp "><code class="language-cpp" data-lang="cpp"><span style="color:#877611;">int</span><span> sensorValue </span><span style="color:#016692;">= </span><span style="color:#696989;">analogRead</span><span>(A0);  </span><span style="color:#898989;">// Liest den Wert vom analogen Pin A0
+</span></code></pre>
+</li>
+<li>
+<p><code>analogWrite(pin, value)</code>: Schreibt einen analogen Wert (<a rel="noopener" target="_blank" href="https://www.elektronik-kompendium.de/sites/kom/0401111.htm">Pulsweitenmodulation</a> - PWM) an einen Pin. Kann verwendet werden, um LED-Helligkeit oder Motor-Position zu steuern.</p>
+<pre data-lang="cpp" style="background-color:#ffffff;color:#010101;" class="language-cpp "><code class="language-cpp" data-lang="cpp"><span style="color:#696989;">analogWrite</span><span>(</span><span style="color:#8c008a;">11</span><span>, </span><span style="color:#8c008a;">123</span><span>);  </span><span style="color:#898989;">// Schreibt einen analogen Wert an den Pin 11
+</span></code></pre>
+<p>Hierfür können wir aber oft einfachere <a rel="noopener" target="_blank" href="https://github.com/CreateX-org/workshop/blob/main/projects/outputs/input_Button_output_Servo/input_Button_output_Servo.ino">Alternativen</a> aus den Bibliotheken verwenden.: </p>
+<pre data-lang="cpp" style="background-color:#ffffff;color:#010101;" class="language-cpp "><code class="language-cpp" data-lang="cpp"><span style="color:#898989;">// in setup():
+</span><span>servo1.</span><span style="color:#696989;">attach</span><span>(SERVO, </span><span style="color:#8c008a;">500</span><span>, </span><span style="color:#8c008a;">2500</span><span>);
+</span><span>
+</span><span> </span><span style="color:#898989;">// in loop():
+</span><span style="color:#877611;">int</span><span> position </span><span style="color:#016692;">= </span><span style="color:#8c008a;">90</span><span>; 
+</span><span style="color:#898989;">// So stellen wir den Motorarm auf 90 Grad ohne analogWrite() ein
+</span><span>servo1.</span><span style="color:#696989;">write</span><span>(position);
+</span></code></pre>
+</li>
+</ol>
+<h2 id="2-3-sonstige-funktionen">2.3 Sonstige Funktionen</h2>
+<ol start="6">
+<li>
+<p><code>delay(ms)</code>: Stoppt das Programm für die angegebene Zeit in Millisekunden.</p>
+<pre data-lang="cpp" style="background-color:#ffffff;color:#010101;" class="language-cpp "><code class="language-cpp" data-lang="cpp"><span style="color:#696989;">delay</span><span>(</span><span style="color:#8c008a;">1000</span><span>);  </span><span style="color:#898989;">// Hält das Programm für eine Sekunde an
+</span></code></pre>
+</li>
+<li>
+<p><code>millis()</code>: Gibt die Anzahl der Millisekunden zurück, seit das Arduino-Board zuletzt zurückgesetzt wurde. </p>
+<pre data-lang="cpp" style="background-color:#ffffff;color:#010101;" class="language-cpp "><code class="language-cpp" data-lang="cpp"><span style="color:#877611;">unsigned long</span><span> time </span><span style="color:#016692;">= </span><span style="color:#696989;">millis</span><span>();  </span><span style="color:#898989;">// Speichert die aktuelle Zeit seit dem Neustart
+</span></code></pre>
+</li>
+<li>
+<p><code>Serial.print()</code>, <code>Serial.println()</code> und <code>Serial.read()</code>: Diese Funktionen steuern die serielle Datenkommunikation zwischen dem Arduino-Board und einem Computer oder anderen Geräten.</p>
+<pre data-lang="cpp" style="background-color:#ffffff;color:#010101;" class="language-cpp "><code class="language-cpp" data-lang="cpp"><span style="color:#898989;">// in setup():
+</span><span>Serial.</span><span style="color:#696989;">begin</span><span>(</span><span style="color:#8c008a;">9600</span><span>);  </span><span style="color:#898989;">// Beginnt eine serielle Kommunikation mit einer Baudrate von 9600
+</span><span>
+</span><span style="color:#898989;">// in loop():
+</span><span>Serial.</span><span style="color:#696989;">println</span><span>(</span><span style="color:#009f78;">&quot;Hello, world!&quot;</span><span>);  </span><span style="color:#898989;">// Sendet &quot;Hello, world!&quot; über die serielle Verbindung
+</span></code></pre>
+<ul>
+<li>Fügt Text in die serielle Konsole ein<pre data-lang="cpp" style="background-color:#ffffff;color:#010101;" class="language-cpp "><code class="language-cpp" data-lang="cpp"><span>Serial.</span><span style="color:#696989;">print</span><span>(</span><span style="color:#009f78;">&quot;Hallo, Welt!&quot;</span><span>);  </span><span style="color:#898989;">// Sendet &quot;Hallo, Welt!&quot; über die serielle Schnittstelle
+</span></code></pre>
+</li>
+<li>Fügt Text in die serielle Konsole ein und fügt eine neue Zeile hinzu<pre data-lang="cpp" style="background-color:#ffffff;color:#010101;" class="language-cpp "><code class="language-cpp" data-lang="cpp"><span>Serial.</span><span style="color:#696989;">println</span><span>(</span><span style="color:#009f78;">&quot;Hallo, Welt!&quot;</span><span>);  </span><span style="color:#898989;">// Sendet &quot;Hallo, Welt!&quot; und dann eine neue Zeile
+</span></code></pre>
+</li>
+<li>liest das nächste verfügbare Zeichen aus der seriellen Schnittstelle<pre data-lang="cpp" style="background-color:#ffffff;color:#010101;" class="language-cpp "><code class="language-cpp" data-lang="cpp"><span style="color:#016692;">if </span><span>(Serial.</span><span style="color:#696989;">available</span><span>() </span><span style="color:#016692;">&gt; </span><span style="color:#8c008a;">0</span><span>) {  </span><span style="color:#898989;">// Prüft, ob Daten zur Verfügung stehen
+</span><span>    </span><span style="color:#877611;">char</span><span> c </span><span style="color:#016692;">=</span><span> Serial.</span><span style="color:#696989;">read</span><span>();    </span><span style="color:#898989;">// Liest das nächste Zeichen
+</span><span>    Serial.</span><span style="color:#696989;">print</span><span>(</span><span style="color:#009f78;">&quot;Eingabe lautet: &quot;</span><span>);
+</span><span>    Serial.</span><span style="color:#696989;">println</span><span>(c);         </span><span style="color:#898989;">// Gibt das eingegebene Zeichen und dann eine neue Zeile aus
+</span><span>}
+</span></code></pre>
+</li>
+<li>Tipp für den Seriellen Plotter: Werte die durch <code>,</code> getrennt ausgegben werden , erscheinen als einzelne Variablen.<pre data-lang="cpp" style="background-color:#ffffff;color:#010101;" class="language-cpp "><code class="language-cpp" data-lang="cpp"><span>Serial.</span><span style="color:#696989;">print</span><span>(Wert1);
+</span><span>Serial.</span><span style="color:#696989;">print</span><span>(</span><span style="color:#009f78;">&quot;, &quot;</span><span>);
+</span><span>Serial.</span><span style="color:#696989;">print</span><span>(Wert2);
+</span><span>Serial.</span><span style="color:#696989;">print</span><span>(</span><span style="color:#009f78;">&quot;, &quot;</span><span>);
+</span><span style="color:#898989;">// neue Zeile nicht vergessen für den nächsten Zeitschritt
+</span><span>Serial.</span><span style="color:#696989;">println</span><span>(Wert3);
+</span></code></pre>
+</li>
+</ul>
+</li>
+</ol>
+<h1 id="3-nutzliche-funktionen-und-methoden">3 Nützliche Funktionen und Methoden</h1>
+<p>Auf der Webseite <a rel="noopener" target="_blank" href="https://docs.arduino.cc/learn/programming/reference/">Arduino API</a> findet ihr viele weitere Arduino-spezifische Funktionen und detaillierte Beschreibungen von Funktionen, Datentypen und Syntax.</p>
+<h2 id="3-1-mathematische-funktionen">3.1 Mathematische Funktionen</h2>
+<ul>
+<li>
+<p><code>max(int val1, int val2)</code></p>
+<ul>
+<li><em>Funktion:</em> Gibt den größeren von zwei Werten zurück.</li>
+<li><em>Parameter:</em> <code>val1</code>, <code>val2</code> – die beiden zu vergleichenden Werte.</li>
+<li><em>Rückgabewert:</em> Der größere der beiden eingegebenen Werte.</li>
+</ul>
+</li>
+<li>
+<p><code>min(int val1, int val2)</code></p>
+<ul>
+<li><em>Funktion:</em> Gibt den kleineren von zwei Werten zurück.</li>
+<li><em>Parameter:</em> <code>val1</code>, <code>val2</code> – die beiden zu vergleichenden Werte.</li>
+<li><em>Rückgabewert:</em> Der kleinere der beiden eingegebenen Werte.</li>
+</ul>
+</li>
+<li>
+<p><code>pow(double base, double exponent)</code></p>
+<ul>
+<li><em>Funktion:</em> Erhebt eine Basis <code>base</code> zur Potenz <code>exponent</code>.</li>
+<li><em>Parameter:</em> <code>base</code> – Die Basiszahl, <code>exponent</code> – Der Exponent, zu dem die Basis erhoben wird.</li>
+<li><em>Rückgabewert:</em> Das Ergebnis der Basis <code>base</code> erhoben zur Potenz <code>exponent</code>.</li>
+</ul>
+</li>
+<li>
+<p><code>sq(int value)</code></p>
+<ul>
+<li><em>Funktion:</em> Berechnet das Quadrat einer Zahl.</li>
+<li><em>Parameter:</em> <code>value</code> – die Zahl, deren Quadrat berechnet werden soll.</li>
+<li><em>Rückgabewert:</em> Das Quadrat der eingegebenen Zahl.</li>
+</ul>
+</li>
+<li>
+<p><code>sqrt(double value)</code></p>
+<ul>
+<li><em>Funktion:</em> Berechnet die Quadratwurzel einer Zahl.</li>
+<li><em>Parameter:</em> <code>value</code> – die Zahl, von der die Quadratwurzel berechnet werden soll.</li>
+<li><em>Rückgabewert:</em> Die Quadratwurzel der eingegebenen Zahl.</li>
+</ul>
+</li>
+<li>
+<p><code>random()</code></p>
+<ul>
+<li><em>Funktion:</em> Generiert eine pseudozufällige Zahl zwischen 0 und RAND_MAX.</li>
+<li><em>Parameter:</em> Keine Parameter erforderlich.</li>
+<li><em>Rückgabewert:</em> Eine pseudozufällige Zahl im Bereich von 0 bis RAND_MAX.</li>
+</ul>
+</li>
+</ul>
+<h2 id="3-2-tricks-zum-umgang-mit-sensoren-werten">3.2 Tricks zum Umgang mit Sensoren-Werten</h2>
+<h3 id="glattung-mittels-gleitendem-mittelwert">Glättung mittels gleitendem Mittelwert</h3>
+<p><a rel="noopener" target="_blank" href="https://de.wikipedia.org/wiki/Gl%C3%A4tten_(Mathematik)">Glättung</a> kann für Sensorwerte angewandt werden, um Messrauschen zu reduzieren und stabilere Daten zu erhalten.</p>
+<ul>
+<li>
+<p><strong>Grundprinzip</strong></p>
+<ul>
+<li><strong>Anzahl der Messungen (<code>numReadings</code>):</strong> Es werden 20 Messungen gespeichert, um daraus den Durchschnitt zu berechnen.</li>
+<li><strong>Speicherarray (<code>readings</code>):</strong> Hier werden die letzten 20 Messwerte gespeichert.</li>
+<li><strong>Laufender Gesamtwert (<code>total</code>):</strong> Summe aller Messwerte im Array, von denen der älteste Wert subtrahiert und der neueste hinzugefügt wird.</li>
+<li><strong>Aktueller Messwert-Index (<code>readIndex</code>):</strong> Zeiger auf das aktuelle Element im Array, das aktualisiert wird.</li>
+<li><strong>Durchschnitt (<code>average</code>):</strong> Berechnung des Durchschnitts aus dem laufenden Gesamtwert, geteilt durch die Anzahl der Messungen.
+<br><br/></li>
+</ul>
+</li>
+<li>
+<p><strong>Code</strong></p>
+<pre data-lang="cpp" style="background-color:#ffffff;color:#010101;" class="language-cpp "><code class="language-cpp" data-lang="cpp"><span style="color:#898989;">// Definition der Konstanten und Variablen für die Glättung
+</span><span style="color:#014a69;">const </span><span style="color:#877611;">int</span><span> numReadings </span><span style="color:#016692;">= </span><span style="color:#8c008a;">20</span><span>;   </span><span style="color:#898989;">// Anzahl der Messungen zur Durchschnittsberechnung
+</span><span style="color:#877611;">int</span><span> readings[numReadings];    </span><span style="color:#898989;">// Array zur Speicherung der letzten Messwerte
+</span><span style="color:#877611;">int</span><span> readIndex </span><span style="color:#016692;">= </span><span style="color:#8c008a;">0</span><span>;            </span><span style="color:#898989;">// Aktueller Index im Array
+</span><span style="color:#877611;">int</span><span> total </span><span style="color:#016692;">= </span><span style="color:#8c008a;">0</span><span>;                </span><span style="color:#898989;">// Laufende Summe der Messwerte
+</span><span style="color:#877611;">int</span><span> average </span><span style="color:#016692;">= </span><span style="color:#8c008a;">0</span><span>;              </span><span style="color:#898989;">// Durchschnittswert der Messungen
+</span><span>
+</span><span>
+</span><span style="color:#898989;">// ------------------------------ in void loop() ------------------------------
+</span><span style="color:#898989;">// Einlesen des aktuellen Sensorwerts
+</span><span style="color:#877611;">int</span><span> sensorValue </span><span style="color:#016692;">= </span><span style="color:#696989;">analogRead</span><span>(INPUT_PIN);
+</span><span>
+</span><span style="color:#898989;">// Update der Messwerte für die Glättung
+</span><span>total </span><span style="color:#016692;">=</span><span> total </span><span style="color:#016692;">-</span><span> readings[readIndex];  </span><span style="color:#898989;">// Subtraktion des ältesten Werts
+</span><span>readings[readIndex] </span><span style="color:#016692;">=</span><span> sensorValue;    </span><span style="color:#898989;">// Speichern des neuen Werts
+</span><span>total </span><span style="color:#016692;">=</span><span> total </span><span style="color:#016692;">+</span><span> sensorValue;          </span><span style="color:#898989;">// Addition des neuen Werts zur Gesamtsumme
+</span><span>readIndex </span><span style="color:#016692;">= </span><span>(readIndex </span><span style="color:#016692;">+ </span><span style="color:#8c008a;">1</span><span>) </span><span style="color:#016692;">%</span><span> numReadings;  </span><span style="color:#898989;">// Zirkuläres Update des Index
+</span><span>
+</span><span style="color:#898989;">// Berechnung des Durchschnitts
+</span><span>average </span><span style="color:#016692;">=</span><span> total </span><span style="color:#016692;">/</span><span> numReadings;
+</span><span>
+</span><span style="color:#898989;">// Ausgabe der geglätteten Werte
+</span><span>Serial.</span><span style="color:#696989;">print</span><span>(</span><span style="color:#009f78;">&quot;Sensor value: &quot;</span><span>);
+</span><span>Serial.</span><span style="color:#696989;">println</span><span>(average);
+</span></code></pre>
+</li>
+<li>
+<p><strong>Erklärung</strong></p>
+<ul>
+<li>
+<p>Der letzte gespeicherte Wert wird vom Gesamtwert subtrahiert.</p>
+</li>
+<li>
+<p>Der neue Sensorwert wird gelesen und im Array gespeichert.</p>
+</li>
+<li>
+<p>Der neue Wert wird zum Gesamtwert hinzugefügt.</p>
+</li>
+<li>
+<p>Der Index für das nächste auszulesende Array-Element wird erhöht.</p>
+</li>
+<li>
+<p>Wenn das Ende des Arrays erreicht ist, beginnt der Index wieder von vorn.</p>
+</li>
+<li>
+<p>Der Durchschnitt der gespeicherten Werte wird berechnet und kann weiterverwendet werden, z.B. zur Steuerung eines Aktors wie einer Wasserpumpe.
+<br><br/></p>
+</li>
+<li>
+<p><code>% numReadings</code>: Der <a rel="noopener" target="_blank" href="https://ddi.uni-wuppertal.de/archiv/madin//material/spioncamp/dl/austausch-modulo-station.pdf">Modulo-Operator</a> <code>%</code> wird verwendet, um den neuen Wert von readIndex zu begrenzen</p>
+<ul>
+<li>der Modulo-Operator gibt den Rest einer Teilung an, zB:
+<ul>
+<li><code>5 % 3 = 2</code>, da <code>5 = 2 + 1 * 3</code></li>
+<li><code>15 % 3 = 0</code>, da <code>15 = 0 + 5 * 3</code></li>
+</ul>
+</li>
+<li><code>numReadings</code> ist die Gesamtanzahl der Slots im Array readings</li>
+<li>das sorgt dafür, dass <code>readIndex</code> auf 0 zurückgesetzt wird, sobald <code>readIndex</code> den Wert <code>numReadings</code> erreicht (was dem letzten Index plus eins entspricht)</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+
+        </div>
+
+        
+        
+    </main>
+
+    
+    <footer>
+        <small class="subtext">
+            <a href="https://github.com/createx-org">github.com/createx-org</a>
+        </small>
+    </footer>
+    
+</body>
+
+</html>

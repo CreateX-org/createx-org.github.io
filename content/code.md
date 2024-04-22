@@ -187,3 +187,108 @@ Die Arduino-Programmiersprache basiert auf C/C++ und bietet eine Reihe von spezi
             Serial.println(c);         // Gibt das eingegebene Zeichen und dann eine neue Zeile aus
         }
         ```
+    - Tipp für den Seriellen Plotter: Werte die durch `,` getrennt ausgegben werden , erscheinen als einzelne Variablen.
+        ```cpp
+        Serial.print(Wert1);
+        Serial.print(", ");
+        Serial.print(Wert2);
+        Serial.print(", ");
+        // neue Zeile nicht vergessen für den nächsten Zeitschritt
+        Serial.println(Wert3);
+        ```
+
+
+
+# 3 Nützliche Funktionen und Methoden
+
+Auf der Webseite [Arduino API](https://docs.arduino.cc/learn/programming/reference/) findet ihr viele weitere Arduino-spezifische Funktionen und detaillierte Beschreibungen von Funktionen, Datentypen und Syntax.
+
+## 3.1 Mathematische Funktionen
+
+- `max(int val1, int val2)`
+    - _Funktion:_ Gibt den größeren von zwei Werten zurück.  
+    - _Parameter:_ `val1`, `val2` – die beiden zu vergleichenden Werte.  
+    - _Rückgabewert:_ Der größere der beiden eingegebenen Werte.
+
+- `min(int val1, int val2)`
+    - _Funktion:_ Gibt den kleineren von zwei Werten zurück.  
+    - _Parameter:_ `val1`, `val2` – die beiden zu vergleichenden Werte.  
+    - _Rückgabewert:_ Der kleinere der beiden eingegebenen Werte.
+
+- `pow(double base, double exponent)`
+    - _Funktion:_ Erhebt eine Basis `base` zur Potenz `exponent`.  
+    - _Parameter:_ `base` – Die Basiszahl, `exponent` – Der Exponent, zu dem die Basis erhoben wird.  
+    - _Rückgabewert:_ Das Ergebnis der Basis `base` erhoben zur Potenz `exponent`.
+
+- `sq(int value)`
+    - _Funktion:_ Berechnet das Quadrat einer Zahl.  
+    - _Parameter:_ `value` – die Zahl, deren Quadrat berechnet werden soll.  
+    - _Rückgabewert:_ Das Quadrat der eingegebenen Zahl.
+
+- `sqrt(double value)`
+    - _Funktion:_ Berechnet die Quadratwurzel einer Zahl.  
+    - _Parameter:_ `value` – die Zahl, von der die Quadratwurzel berechnet werden soll.  
+    - _Rückgabewert:_ Die Quadratwurzel der eingegebenen Zahl.
+
+- `random()`
+    - _Funktion:_ Generiert eine pseudozufällige Zahl zwischen 0 und RAND_MAX.  
+    - _Parameter:_ Keine Parameter erforderlich.  
+    - _Rückgabewert:_ Eine pseudozufällige Zahl im Bereich von 0 bis RAND_MAX.
+
+## 3.2 Tricks zum Umgang mit Sensoren-Werten
+
+### Glättung mittels gleitendem Mittelwert
+[Glättung](https://de.wikipedia.org/wiki/Glätten_(Mathematik)) kann für Sensorwerte angewandt werden, um Messrauschen zu reduzieren und stabilere Daten zu erhalten.
+
+- **Grundprinzip**
+  - **Anzahl der Messungen (`numReadings`):** Es werden 20 Messungen gespeichert, um daraus den Durchschnitt zu berechnen.
+  - **Speicherarray (`readings`):** Hier werden die letzten 20 Messwerte gespeichert.
+  - **Laufender Gesamtwert (`total`):** Summe aller Messwerte im Array, von denen der älteste Wert subtrahiert und der neueste hinzugefügt wird.
+  - **Aktueller Messwert-Index (`readIndex`):** Zeiger auf das aktuelle Element im Array, das aktualisiert wird.
+  - **Durchschnitt (`average`):** Berechnung des Durchschnitts aus dem laufenden Gesamtwert, geteilt durch die Anzahl der Messungen.
+<br><br/>
+
+- **Code**
+    ```cpp
+    // Definition der Konstanten und Variablen für die Glättung
+    const int numReadings = 20;   // Anzahl der Messungen zur Durchschnittsberechnung
+    int readings[numReadings];    // Array zur Speicherung der letzten Messwerte
+    int readIndex = 0;            // Aktueller Index im Array
+    int total = 0;                // Laufende Summe der Messwerte
+    int average = 0;              // Durchschnittswert der Messungen
+
+
+    // ------------------------------ in void loop() ------------------------------
+    // Einlesen des aktuellen Sensorwerts
+    int sensorValue = analogRead(INPUT_PIN);
+
+    // Update der Messwerte für die Glättung
+    total = total - readings[readIndex];  // Subtraktion des ältesten Werts
+    readings[readIndex] = sensorValue;    // Speichern des neuen Werts
+    total = total + sensorValue;          // Addition des neuen Werts zur Gesamtsumme
+    readIndex = (readIndex + 1) % numReadings;  // Zirkuläres Update des Index
+
+    // Berechnung des Durchschnitts
+    average = total / numReadings;
+
+    // Ausgabe der geglätteten Werte
+    Serial.print("Sensor value: ");
+    Serial.println(average);
+    ```
+
+- **Erklärung**
+    - Der letzte gespeicherte Wert wird vom Gesamtwert subtrahiert.
+    - Der neue Sensorwert wird gelesen und im Array gespeichert.
+    - Der neue Wert wird zum Gesamtwert hinzugefügt.
+    - Der Index für das nächste auszulesende Array-Element wird erhöht.
+    - Wenn das Ende des Arrays erreicht ist, beginnt der Index wieder von vorn.
+    - Der Durchschnitt der gespeicherten Werte wird berechnet und kann weiterverwendet werden, z.B. zur Steuerung eines Aktors wie einer Wasserpumpe.
+  <br><br/>
+
+  - `% numReadings`: Der [Modulo-Operator](https://ddi.uni-wuppertal.de/archiv/madin//material/spioncamp/dl/austausch-modulo-station.pdf) `%` wird verwendet, um den neuen Wert von readIndex zu begrenzen
+    - der Modulo-Operator gibt den Rest einer Teilung an, zB:
+      - `5 % 3 = 2`, da `5 = 2 + 1 * 3`
+      - `15 % 3 = 0`, da `15 = 0 + 5 * 3`
+    - `numReadings` ist die Gesamtanzahl der Slots im Array readings
+    - das sorgt dafür, dass `readIndex` auf 0 zurückgesetzt wird, sobald `readIndex` den Wert `numReadings` erreicht (was dem letzten Index plus eins entspricht)
+    
